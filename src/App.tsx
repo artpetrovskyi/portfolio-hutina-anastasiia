@@ -1,7 +1,7 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
-import { useFetchContent } from "./hooks/useFetchContent";
+// import { useFetchContent } from "./hooks/useFetchContent";
 import { useLanguage } from "./hooks/useLanguage";
 
 function App() {
