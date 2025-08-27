@@ -68,16 +68,18 @@ export default function Hero() {
           {text}
         </p>
 
-        <div className="ibg pointer-events-none relative z-2 -mt-10 min-h-[23rem] min-[500px]:mt-0 min-[500px]:h-full md:min-h-[46rem]">
+        <div className="ibg pointer-events-none relative z-2 -mt-10 min-h-[23rem] min-[500px]:mt-0 min-[500px]:min-h-[36rem] md:min-h-[46rem]">
           <img
             src="./images/hero.png"
             alt="Hutina Anastasiia"
             className="object-contain object-bottom px-5 sm:px-0"
+            width={1408}
+            height={736}
           />
           <div className="from-background absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t to-transparent"></div>
         </div>
 
-        <div className="absolute right-0 bottom-30 z-3 self-end pb-10 leading-none min-[500px]:bottom-0 md:pt-20">
+        <div className="absolute right-0 bottom-30 z-3 self-end pb-10 leading-none md:bottom-0 md:pt-20">
           <div className="-mb-5 text-[2.5rem] font-extralight uppercase sm:text-5xl md:text-6xl lg:text-7xl xl:-mb-10 xl:text-8xl">
             UX/UI
           </div>
