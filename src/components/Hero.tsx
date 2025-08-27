@@ -1,4 +1,47 @@
 import { Button } from "./ui/button";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+
+const CONTACTS = [
+  {
+    label: "telegram",
+    title: "@anastasiahutina",
+    href: "https://t.me/anastasiahutina",
+    icon: "telegram.svg",
+  },
+  {
+    label: "behance",
+    title: "Anastasiia Hutina",
+    href: "https://www.behance.net/anastasiiahutina",
+    icon: "behance.svg",
+  },
+  {
+    label: "whatsapp",
+    title: "+380 67 010 33 77",
+    href: "tel:+380670103377",
+    icon: "whatsapp.svg",
+  },
+  {
+    label: "instagram",
+    title: "@steisi.design",
+    href: "https://instagram.com/steisi.design",
+    icon: "instagram.svg",
+  },
+  {
+    label: "email",
+    title: "Hutinaanastasiia@ukr.net",
+    href: "mailto:Hutinaanastasiia@ukr.net",
+    icon: "email.svg",
+  },
+];
 
 export default function Hero() {
   const year = new Date().getFullYear();
@@ -50,9 +93,55 @@ export default function Hero() {
             </p>
             <p className="uppercase md:hidden">{text}</p>
           </div>
-          <Button className="min-h-12 min-w-60 cursor-pointer rounded-none text-2xl">
-            Advice
-          </Button>
+
+          <Drawer>
+            <DrawerTrigger asChild>
+              <Button className="text-2xl min-w-60">Advice</Button>
+            </DrawerTrigger>
+            <DrawerContent>
+              <div className="mx-auto w-full max-w-sm">
+                <DrawerHeader>
+                  <DrawerTitle className="text-2xl leading-none font-extralight uppercase">Ask me anything</DrawerTitle>
+                  <DrawerDescription className="font-light">
+                    Let's get in touch!
+                  </DrawerDescription>
+                </DrawerHeader>
+                <ul className="flex flex-col gap-4 p-4">
+                  {CONTACTS.map(({ label, title, href, icon }) => (
+                    <li key={label}>
+                      <Button
+                        variant="outline"
+                        asChild
+                        className="w-full min-w-60"
+                      >
+                        <a
+                          href={href}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="flex items-center gap-4 font-light"
+                        >
+                          <img
+                            src={`./images/icons/${icon}`}
+                            alt={title}
+                            width={20}
+                            height={20}
+                          />
+                          <span> {title}</span>
+                        </a>
+                      </Button>
+                    </li>
+                  ))}
+                </ul>
+                <DrawerFooter>
+                  <DrawerClose asChild>
+                    <Button variant="secondary" className="min-w-60">
+                      Cancel
+                    </Button>
+                  </DrawerClose>
+                </DrawerFooter>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </section>
