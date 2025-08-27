@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
       <div className="hidden min-[800px]:block">
         <button
           onClick={() => toggleLanguage()}
-          className="flex flex-row-reverse"
+          className="flex flex-row-reverse cursor-pointer"
         >
           {languages.map((lang, i) => (
             <React.Fragment key={lang}>

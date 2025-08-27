@@ -16,7 +16,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="relative z-10 mb-80 bg-background">
+      <main className="">
         <Hero />
         <div className="space-y-60">
         </div>

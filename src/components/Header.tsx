@@ -26,12 +26,12 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="bg-background">
+    <header className="bg-background absolute top-0 left-0 w-full z-10">
       <div className="container flex items-center py-5 text-xl md:gap-5 md:text-2xl">
         <div className="order-1 flex-1">
           <a
             href="/"
-            onClick={(e) => e.preventDefault()}
+            // onClick={(e) => e.preventDefault()}
             className="whitespace-nowrap uppercase"
           >
             Hutina Anastasiia
