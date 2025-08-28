@@ -1,3 +1,4 @@
+import ContactButton from "./ContactButton";
 import { Button } from "./ui/button";
 import {
   Drawer,
@@ -48,7 +49,7 @@ export default function Hero() {
   const text = "I create designs that don't just look good, they work.";
 
   return (
-    <section className="container mb-10 sm:mb-15 md:mb-20 flex pt-30 pb-10 md:min-h-svh [@media(min-height:1080px)]:min-h-auto">
+    <section className="container mb-10 flex pt-30 pb-10 sm:mb-15 md:mb-20 md:min-h-svh [@media(min-height:1080px)]:min-h-auto">
       <div className="relative flex-1">
         <div className="top-0 -left-5 z-1 min-[500px]:absolute min-[500px]:left-0">
           <div className="mb-5 flex flex-col leading-none">
@@ -111,28 +112,9 @@ export default function Hero() {
                   </DrawerDescription>
                 </DrawerHeader>
                 <ul className="flex flex-col gap-4 p-4">
-                  {CONTACTS.map(({ label, title, href, icon }) => (
-                    <li key={label}>
-                      <Button
-                        variant="outline"
-                        asChild
-                        className="w-full min-w-60"
-                      >
-                        <a
-                          href={href}
-                          target="_blank"
-                          rel="noreferrer"
-                          className="flex items-center gap-4 font-light"
-                        >
-                          <img
-                            src={`./images/icons/${icon}`}
-                            alt={title}
-                            width={20}
-                            height={20}
-                          />
-                          <span> {title}</span>
-                        </a>
-                      </Button>
+                  {CONTACTS.map((contact) => (
+                    <li key={contact.label}>
+                      <ContactButton {...contact} className="w-full min-w-60" />
                     </li>
                   ))}
                 </ul>
