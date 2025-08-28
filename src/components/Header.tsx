@@ -24,6 +24,39 @@ const NAV_LINKS = [
   },
 ] as const;
 
+const CONTACTS = [
+  {
+    label: "telegram",
+    title: "@anastasiahutina",
+    href: "https://t.me/anastasiahutina",
+    icon: "telegram.svg",
+  },
+  {
+    label: "behance",
+    title: "Anastasiia Hutina",
+    href: "https://www.behance.net/anastasiiahutina",
+    icon: "behance.svg",
+  },
+  {
+    label: "whatsapp",
+    title: "+380 67 010 33 77",
+    href: "tel:+380670103377",
+    icon: "whatsapp.svg",
+  },
+  {
+    label: "instagram",
+    title: "@steisi.design",
+    href: "https://instagram.com/steisi.design",
+    icon: "instagram.svg",
+  },
+  {
+    label: "email",
+    title: "Hutinaanastasiia@ukr.net",
+    href: "mailto:Hutinaanastasiia@ukr.net",
+    icon: "email.svg",
+  },
+];
+
 export default function Header() {
   return (
     <header className="bg-background absolute top-0 left-0 z-10 w-full">
@@ -78,11 +111,11 @@ export default function Header() {
                 </svg>
               </Button>
             </SheetTrigger>
-            <SheetContent className="">
+            <SheetContent className="flex gap-10 px-6 py-30 pb-10 overflow-auto">
               <SheetTitle className="sr-only">Menu</SheetTitle>
               <SheetDescription className="sr-only">Menu</SheetDescription>
-              <nav>
-                <ul className="flex flex-col items-end gap-8 px-6 py-30 pb-10">
+              <nav className="flex-1">
+                <ul className="flex flex-col items-end gap-10">
                   {NAV_LINKS.map(({ anchor, title }) => (
                     <li key={anchor}>
                       <Link
@@ -91,7 +124,7 @@ export default function Header() {
                         offset={-50}
                         smooth={true}
                         duration={500}
-                        className="text-2xl uppercase"
+                        className="text-3xl uppercase"
                       >
                         {title}
                       </Link>
@@ -99,6 +132,25 @@ export default function Header() {
                   ))}
                 </ul>
               </nav>
+              <ul className="space-y-5">
+                {CONTACTS.map((contact) => (
+                  <li key={contact.label}>
+                    <Button
+                      asChild
+                      variant="outline"
+                      size="icon"
+                      className="w-full"
+                    >
+                      <a href={contact.href} target="_blank" rel="noreferrer">
+                        <img
+                          src={`./images/icons/${contact.icon}`}
+                          alt={contact.title}
+                        />
+                      </a>
+                    </Button>
+                  </li>
+                ))}
+              </ul>
             </SheetContent>
           </Sheet>
         </div>
