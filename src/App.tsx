@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -18,7 +19,8 @@ function App() {
       <Header />
       <main className="">
         <Hero />
-        <div className="space-y-60">
+        <div className="space-y-20">
+          <About />
         </div>
       </main>
       <Footer />
