@@ -26,12 +26,11 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="bg-background absolute top-0 left-0 w-full z-10">
+    <header className="bg-background absolute top-0 left-0 z-10 w-full">
       <div className="container flex items-center py-5 text-xl md:gap-5 md:text-2xl">
         <div className="order-1 flex-1">
           <a
-            href="/"
-            // onClick={(e) => e.preventDefault()}
+            href={import.meta.env.VITE_API_URL}
             className="whitespace-nowrap uppercase"
           >
             Hutina Anastasiia
@@ -57,7 +56,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <nav className="order-3 block min-[800px]:hidden">
+        <div className="order-3 block min-[800px]:hidden">
           <Sheet>
             <SheetTrigger asChild>
               <Button size="icon" variant="ghost">
@@ -79,28 +78,30 @@ export default function Header() {
                 </svg>
               </Button>
             </SheetTrigger>
-            <SheetContent className="w-auto">
-              <SheetTitle className="hidden">Menu</SheetTitle>
-              <SheetDescription className="hidden">Menu</SheetDescription>
-              <ul className="flex flex-col items-end gap-5 px-6 py-20 pb-10">
-                {NAV_LINKS.map(({ anchor, title }) => (
-                  <li key={anchor}>
-                    <Link
-                      to={anchor}
-                      href={`#${anchor}`}
-                      offset={-50}
-                      smooth={true}
-                      duration={500}
-                      className="text-xl uppercase"
-                    >
-                      {title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            <SheetContent className="">
+              <SheetTitle className="sr-only">Menu</SheetTitle>
+              <SheetDescription className="sr-only">Menu</SheetDescription>
+              <nav>
+                <ul className="flex flex-col items-end gap-8 px-6 py-30 pb-10">
+                  {NAV_LINKS.map(({ anchor, title }) => (
+                    <li key={anchor}>
+                      <Link
+                        to={anchor}
+                        href={`#${anchor}`}
+                        offset={-50}
+                        smooth={true}
+                        duration={500}
+                        className="text-2xl uppercase"
+                      >
+                        {title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </SheetContent>
           </Sheet>
-        </nav>
+        </div>
 
         <div className="order-2 ml-5">
           <LanguageSwitcher />
