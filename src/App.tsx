@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Cases from "./components/Cases";
 import Contacts from "./components/Contacts";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -21,8 +22,9 @@ function App() {
       <Header />
       <main className="">
         <Hero />
-        <div className="space-y-25">
+        <div className="space-y-30 sm:space-y-20">
           <About />
+          <Cases />
           <Process />
           <Contacts />
         </div>
