@@ -29,19 +29,19 @@ const CASES = [
     href: "#",
   },
   {
-    title: "Barbara Palvin",
+    title: "Barbara Palvin1",
     image: "barbara-palvin.jpg",
     body: "Landing design for a fashion brand with an emphasis on atmosphere",
     href: "#",
   },
   {
-    title: "SantehProstir",
+    title: "SantehProstir2",
     image: "santehprostir.jpg",
     body: "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
     href: "#",
   },
   {
-    title: "Barbara Palvin",
+    title: "Barbara Palvin3",
     image: "barbara-palvin.jpg",
     body: "Landing design for a fashion brand with an emphasis on atmosphere",
     href: "#",
@@ -63,7 +63,7 @@ const OFFERS = [
 
 export default function Cases() {
   return (
-    <section className="container">
+    <section id="cases" className="container">
       <Carousel
         opts={{
           align: "start",
@@ -76,11 +76,11 @@ export default function Cases() {
           <div className="mb-6 flex items-end gap-5 min-[500px]:mb-10">
             <CarouselPrevious
               variant="secondary"
-              className="bg-gradient static translate-0 rounded-none border border-white px-10 max-[500px]:flex-1"
+              className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
             />
             <CarouselNext
               variant="secondary"
-              className="bg-gradient static translate-0 rounded-none border border-white px-10 max-[500px]:flex-1"
+              className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
             />
           </div>
         </div>

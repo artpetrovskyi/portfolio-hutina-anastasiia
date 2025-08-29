@@ -99,7 +99,9 @@ export default function Hero() {
 
           <Drawer>
             <DrawerTrigger asChild>
-              <Button className="min-w-60 text-2xl">Advice</Button>
+              <Button className="min-h-12 min-w-60 text-2xl !font-normal">
+                Advice
+              </Button>
             </DrawerTrigger>
             <DrawerContent>
               <div className="mx-auto w-full max-w-sm">

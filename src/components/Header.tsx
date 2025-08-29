@@ -8,6 +8,8 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "./ui/button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useState } from "react";
+import { AlignJustify } from "lucide-react";
 
 const NAV_LINKS = [
   {
@@ -58,6 +60,8 @@ const CONTACTS = [
 ];
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
     <header className="bg-background absolute top-0 left-0 z-10 w-full">
       <div className="container flex items-center py-5 text-xl md:gap-5 md:text-2xl">
@@ -74,44 +78,31 @@ export default function Header() {
           <ul className="flex gap-5">
             {NAV_LINKS.map(({ anchor, title }) => (
               <li key={anchor}>
-                <Link
-                  to={anchor}
-                  href={`#${anchor}`}
-                  offset={-50}
-                  smooth={true}
-                  duration={500}
-                  className="uppercase"
-                >
-                  {title}
-                </Link>
+                <Button asChild variant="link" className="px-0">
+                  <Link
+                    to={anchor}
+                    href={`#${anchor}`}
+                    offset={-50}
+                    smooth={true}
+                    duration={500}
+                    className="uppercase"
+                  >
+                    {title}
+                  </Link>
+                </Button>
               </li>
             ))}
           </ul>
         </nav>
 
         <div className="order-3 block min-[800px]:hidden">
-          <Sheet>
+          <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button size="icon" variant="ghost">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="size-6"
-                >
-                  <path d="M3 12h18" />
-                  <path d="M3 18h18" />
-                  <path d="M3 6h18" />
-                </svg>
+                <AlignJustify className="size-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent className="flex gap-10 px-6 py-30 pb-10 overflow-auto">
+            <SheetContent className="flex gap-10 overflow-auto px-6 py-30 pb-10">
               <SheetTitle className="sr-only">Menu</SheetTitle>
               <SheetDescription className="sr-only">Menu</SheetDescription>
               <nav className="flex-1">
@@ -125,6 +116,7 @@ export default function Header() {
                         smooth={true}
                         duration={500}
                         className="text-3xl uppercase"
+                        onClick={() => setOpen(false)}
                       >
                         {title}
                       </Link>

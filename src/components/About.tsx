@@ -21,7 +21,7 @@ const features = [
 
 export default function About() {
   return (
-    <section className="container">
+    <section id="about-me" className="container">
       <SectionTop>About me</SectionTop>
 
       <div className="md:pl-[20%]">

@@ -38,10 +38,10 @@ const CONTACTS = [
 
 export default function Contacts() {
   return (
-    <section className="container">
+    <section id="contacts" className="container">
       <SectionTop>Contacts</SectionTop>
 
-      <ul className="flex flex-col flex-wrap min-[500px]:gap-5 gap-1 min-[500px]:flex-row">
+      <ul className="flex flex-col flex-wrap gap-1 min-[500px]:flex-row min-[500px]:gap-5">
         {CONTACTS.map((contact, i) => (
           <li
             key={contact.label}
@@ -58,7 +58,7 @@ export default function Contacts() {
             ) : (
               <ContactButton
                 {...contact}
-                className="min-h-[4.375rem] min-[500px]:w-full min-w-60 !border-white max-[500px]:justify-start max-[500px]:border-none max-[500px]:px-0 max-[500px]:min-h-12"
+                className="min-h-[4.375rem] min-w-60 !border-white max-[500px]:min-h-12 max-[500px]:justify-start max-[500px]:border-none max-[500px]:px-0 min-[500px]:w-full"
               />
             )}
           </li>
