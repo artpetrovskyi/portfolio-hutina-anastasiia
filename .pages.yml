@@ -80,8 +80,8 @@ content:
     path: content/cases.json
     fields:
       # Cases Section
-      - name: items
-        label: Items
+      - name: cases_section
+        label: Cases Section
         type: object
         list: true
         fields:
