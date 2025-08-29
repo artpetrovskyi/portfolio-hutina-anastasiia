@@ -24,5 +24,18 @@
       },
       "link": "https://www.behance.net/gallery/225260659/STRUT-Society-Landing-Page-for-Barbara-Palvin"
     }
+  ],
+  "services": [
+    {
+      "image": "/images/cases/ai-smm-assistant.jpg",
+      "title": {
+        "en": "Landing",
+        "uk": "Лендинг"
+      },
+      "body": {
+        "en": "Design of an AI SMM assistant for a marketing company",
+        "uk": "Дизайн AI-асистента для SMM-відділу маркетингової компанії"
+      }
+    }
   ]
 }
