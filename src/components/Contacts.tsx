@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import ContactButton from "./ContactButton";
 import SectionTop from "./SectionTop";
 import { Button } from "./ui/button";
+import Reveal from "./Reveal";
 
 const CONTACTS = [
   {
@@ -52,14 +53,18 @@ export default function Contacts() {
             )}
           >
             {i === CONTACTS.length - 1 ? (
-              <Button asChild variant="link" className="px-0">
-                <a href={contact.href}>{contact.title}</a>
-              </Button>
+              <Reveal>
+                <Button asChild variant="link" className="px-0">
+                  <a href={contact.href}>{contact.title}</a>
+                </Button>
+              </Reveal>
             ) : (
-              <ContactButton
-                {...contact}
-                className="min-h-[4.375rem] min-w-60 !border-white max-[500px]:min-h-12 max-[500px]:justify-start max-[500px]:border-none max-[500px]:px-0 min-[500px]:w-full"
-              />
+              <Reveal>
+                <ContactButton
+                  {...contact}
+                  className="min-h-[4.375rem] min-w-60 !border-white max-[500px]:min-h-12 max-[500px]:justify-start max-[500px]:border-none max-[500px]:px-0 min-[500px]:w-full"
+                />
+              </Reveal>
             )}
           </li>
         ))}

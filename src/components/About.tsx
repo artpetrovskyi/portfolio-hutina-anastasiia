@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import SectionTop from "./SectionTop";
 
 const features = [
@@ -25,27 +26,34 @@ export default function About() {
       <SectionTop>About me</SectionTop>
 
       <div className="md:pl-[20%]">
-        <ul className="border-foreground space-y-5 border-t">
-          {features.map(({ title, body }) => (
-            <li key={title} className="border-foreground border-b pt-5 pb-2">
-              <div className="relative flex gap-5 pt-16 sm:pt-20 ">
-                <h3 className="flex-[1_0_9.3rem] self-end text-xl font-extralight uppercase sm:flex-[1_0_12.5rem] sm:text-3xl max-[425px]:rotate-[-90deg] max-[425px]:origin-[0_0] max-[425px]:absolute max-[425px]:-bottom-5 max-[425px]:left-0">
-                  {title}
-                </h3>
+        <ul className="space-y-5">
+          {features.map(({ title, body }, i) => (
+            <li key={title}>
+              <Reveal
+                className={`border-foreground border-b pt-5 pb-2 ${i === 0 && "border-t"}`}
+              >
+                <div className="relative flex gap-5 pt-16 sm:pt-20">
+                  <h3 className="flex-[1_0_9.3rem] self-end text-xl font-extralight uppercase max-[425px]:absolute max-[425px]:-bottom-5 max-[425px]:left-0 max-[425px]:origin-[0_0] max-[425px]:rotate-[-90deg] sm:flex-[1_0_12.5rem] sm:text-3xl">
+                    {title}
+                  </h3>
 
-                <p className="flex-[0_1_50rem] max-[425px]:pl-12">{body}</p>
+                  <p className="flex-[0_1_50rem] max-[425px]:pl-12">{body}</p>
 
-                <svg
-                  className="absolute top-0 right-0"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="38"
-                  height="38"
-                  viewBox="0 0 38 38"
-                  fill="none"
-                >
-                  <path d="M37 38L37 1M37 1L1 1M37 1L1 37.075" stroke="white" />
-                </svg>
-              </div>
+                  <svg
+                    className="absolute top-0 right-0"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="38"
+                    height="38"
+                    viewBox="0 0 38 38"
+                    fill="none"
+                  >
+                    <path
+                      d="M37 38L37 1M37 1L1 1M37 1L1 37.075"
+                      stroke="white"
+                    />
+                  </svg>
+                </div>
+              </Reveal>
             </li>
           ))}
         </ul>

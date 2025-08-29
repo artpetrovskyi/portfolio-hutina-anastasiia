@@ -1,3 +1,4 @@
+import Reveal from "./Reveal";
 import SectionTop from "./SectionTop";
 
 const PROCESS = [
@@ -51,25 +52,28 @@ export default function Process() {
       <ul className="grid grid-cols-6 grid-rows-7 gap-5 md:grid-rows-4 xl:grid-rows-3">
         {/* Static text in first slot */}
         <li className={`${columnClasses[0]} flex items-center md:block`}>
-          <p className="max-w-72 text-2xl leading-none font-extralight uppercase md:max-w-60">
-            This is a general outline. Each project is unique, so the process
-            may vary depending on your goals and needs.
-          </p>
+          <Reveal>
+            <p className="max-w-72 text-2xl leading-none font-extralight uppercase md:max-w-60">
+              This is a general outline. Each project is unique, so the process
+              may vary depending on your goals and needs.
+            </p>
+          </Reveal>
         </li>
 
         {/* PROCESS items start from columnClasses[1] */}
         {PROCESS.map(({ title, description }, i) => (
-          <li
-            key={title}
-            className={`${columnClasses[i + 1]} flex flex-col border border-white p-3 leading-tight`}
-          >
-            <div className="mb-2 text-4xl font-extralight sm:text-5xl">
-              /0{i + 1}
-            </div>
-            <h3 className="mb-3 flex-1 text-xl font-extralight uppercase sm:text-3xl">
-              {title}
-            </h3>
-            <p>{description}</p>
+          <li key={title} className={`${columnClasses[i + 1]} `}>
+            <Reveal className="h-full">
+              <div className="flex h-full flex-col border border-white p-3 leading-tight">
+                <div className="mb-2 text-4xl font-extralight sm:text-5xl">
+                  /0{i + 1}
+                </div>
+                <h3 className="mb-3 flex-1 text-xl font-extralight uppercase sm:text-3xl">
+                  {title}
+                </h3>
+                <p>{description}</p>
+              </div>
+            </Reveal>
           </li>
         ))}
       </ul>

@@ -1,4 +1,5 @@
 import CaseCard, { OfferCard } from "./CaseCard";
+import Reveal from "./Reveal";
 import SectionTop from "./SectionTop";
 import {
   Carousel,
@@ -65,41 +66,47 @@ export default function Cases() {
         {/* Top */}
         <div className="flex flex-col justify-between min-[500px]:flex-row min-[500px]:gap-5">
           <SectionTop>Cases</SectionTop>
-          <div className="mb-6 flex items-end gap-5 min-[500px]:mb-10">
-            <CarouselPrevious
-              variant="secondary"
-              className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
-            />
-            <CarouselNext
-              variant="secondary"
-              className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
-            />
-          </div>
+          <Reveal className="mt-auto">
+            <div className="mb-6 flex items-end gap-5 min-[500px]:mb-10">
+              <CarouselPrevious
+                variant="secondary"
+                className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
+              />
+              <CarouselNext
+                variant="secondary"
+                className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
+              />
+            </div>
+          </Reveal>
         </div>
 
-        <CarouselContent className="-ml-5">
-          <CarouselItem className="hidden pl-5 md:basis-[45%] lg:basis-[40%] xl:block xl:basis-1/3"></CarouselItem>
-          {CASES.map((item) => (
-            <CarouselItem
-              key={item.title}
-              className="basis-full pl-5 min-[500px]:basis-[80%] sm:basis-[55%] md:basis-[45%] lg:basis-[40%] xl:basis-1/3"
-            >
-              <CaseCard {...item} />
-            </CarouselItem>
-          ))}
-        </CarouselContent>
+        <Reveal>
+          <CarouselContent className="-ml-5">
+            <CarouselItem className="hidden pl-5 md:basis-[45%] lg:basis-[40%] xl:block xl:basis-1/3"></CarouselItem>
+            {CASES.map((item) => (
+              <CarouselItem
+                key={item.title}
+                className="basis-full pl-5 min-[500px]:basis-[80%] sm:basis-[55%] md:basis-[45%] lg:basis-[40%] xl:basis-1/3"
+              >
+                <CaseCard {...item} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Reveal>
       </Carousel>
 
-      <div className="border-foreground border- mt-10 border-t pt-10">
-        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-          {/* <li></li> */}
-          {SERVICES.map((item) => (
-            <li key={item.title}>
-              <OfferCard {...item} />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <Reveal>
+        <div className="border-foreground border- mt-10 border-t pt-10">
+          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
+            {/* <li></li> */}
+            {SERVICES.map((item) => (
+              <li key={item.title}>
+                <OfferCard {...item} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Reveal>
     </section>
   );
 }

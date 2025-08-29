@@ -11,6 +11,7 @@ import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useState } from "react";
 import { AlignJustify } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
+import { motion } from "motion/react";
 
 const NAV_LINKS = [
   {
@@ -75,7 +76,12 @@ export default function Header() {
 
   return (
     <header className="bg-background absolute top-0 left-0 z-10 w-full">
-      <div className="container flex items-center py-5 text-xl md:gap-5 md:text-2xl">
+      <motion.div
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+        className="container flex items-center py-5 text-xl md:gap-5 md:text-2xl"
+      >
         <div className="order-1 flex-1">
           <a
             href={import.meta.env.VITE_API_URL}
@@ -161,7 +167,7 @@ export default function Header() {
         <div className="order-2 ml-5">
           <LanguageSwitcher />
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 }
