@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "image": "/images/projects/chicago-hendriks.png",
+      "title": {
+        "en": "Chicago Hendriks – Unique Style & Animations",
+        "ru": "Chicago Hendriks — Уникальный стиль и анимации"
+      },
+      "body": {
+        "en": "A stylish personal portfolio with a distinctive design and captivating animations. Built using **React, Tailwind CSS, and TypeScript** for a modern, fast, and responsive experience.\n\n**Features:**\n\n*   Distinctive, artistic visual style\n    \n*   Smooth, dynamic animations\n    \n*   Responsive layout for all devices",
+        "ru": "Стильное портфолио с выразительным дизайном и впечатляющими анимациями. Разработано на **React, Tailwind CSS и TypeScript** для современного, быстрого и адаптивного интерфейса.\n\n**Функции:**\n\n*   Уникальный визуальный стиль\n    \n*   Плавные и динамичные анимации\n    \n*   Адаптивная верстка под все устройства"
+      },
+      "link": "https://artpetrovskyi.github.io/portfolio-chicago-hendriks/"
+    },
+    {
+      "image": "/images/projects/norimania.png",
+      "title": {
+        "en": "Norimania – Modern Sushi Shop Web App",
+        "ru": "Norimania — Современный суши‑шоп на Next.js"
+      },
+      "body": {
+        "en": "Next.js application with registration, shopping cart and search of products. Modern design and user-friendly interface for comfortable online order sushi.\n\n**Features:**\n\n*   User registration and login\n    \n*   Shopping cart functionality\n    \n*   Product search",
+        "ru": "Приложение с регистрацией, корзиной и поиском товаров. Удобный интерфейс и современный дизайн для онлайн‑заказа суши.\n\n**Функции:**\n\n*   Регистрация и авторизация пользователей\n    \n*   Функционал корзины\n    \n*   Поиск товаров"
+      },
+      "link": "https://norimania-website.vercel.app/"
+    },
+    {
+      "image": "/images/projects/mostehviveska.png",
+      "title": {
+        "en": "Mostehviveska – Corporate Website for Engineering Company",
+        "ru": "Мостехвывеска — Корпоративный сайт для инженерной компании"
+      },
+      "body": {
+        "en": "A professional multi‑page website for a construction and signage company. Includes service descriptions, portfolio gallery, and contact integration. Designed for clarity, responsiveness, and fast performance.\n\n**Features:**\n\n*   Multi-page corporate website structure\n    \n*   Service and portfolio presentation\n    \n*   Responsive design for all devices",
+        "ru": "Профессиональный многостраничный сайт для компании по производству вывесок и строительных решений. Включает описание услуг, галерею проектов и форму связи. Адаптивный дизайн и высокая скорость загрузки.\n\n**Функции:**\n\n*   Многостраничная структура сайта\n    \n*   Разделы с услугами и портфолио\n    \n*   Адаптивный дизайн для всех устройств"
+      },
+      "link": "https://mostehviveska.ru/"
+    },
+    {
+      "image": "/images/projects/caseprint.png",
+      "title": {
+        "en": "CasePrint – Custom Photo Phone‑Case Builder",
+        "ru": "CasePrint — Конструктор чехлов с фото"
+      },
+      "body": {
+        "en": "A modern web app for customizing phone cases. Users can upload photos and instantly preview their design. Built with **Next.js**, fully responsive, and deployed on Vercel.\n\n**Features:**\n\n*   Upload your own image\n    \n*   Instant live preview on phone case\n    \n*   Responsive design for all devices",
+        "ru": "Современное веб-приложение для создания уникальных чехлов. Загружайте фото и сразу смотрите, как будет выглядеть ваш дизайн. Сделано на **Next.js**, адаптивно и размещено на Vercel.\n\n**Функции:**\n\n*   Загрузка собственного изображения\n    \n*   Мгновенное онлайн-превью на чехле\n    \n*   Адаптивный дизайн для любых устройств"
+      },
+      "link": "https://case-print.vercel.app/"
+    },
+    {
+      "image": "/images/projects/ecomarket.png",
+      "title": {
+        "en": "EcoMarket – Sustainable E‑Commerce Platform",
+        "ru": "EcoMarket — Эко‑маркет для онлайн‑покупок"
+      },
+      "body": {
+        "en": "A modern online store built with **React**, focused on eco-friendly products. Includes intuitive navigation, product listings, search and a responsive design for seamless shopping on any device.\n\n**Features:**\n\n*   Clean, minimal UI for product browsing\n    \n*   Responsive design for desktop and mobile\n    \n*   Clean, modern UI design",
+        "ru": "Современный интернет-магазин, созданный на **React**, с акцентом на экологичные товары. Удобная навигация, карточки товаров, поиск и адаптивный дизайн для любых устройств.\n\n**Функции:**\n\n*   Чистый минималистичный интерфейс\n    \n*   Адаптивный дизайн для ПК и смартфонов\n    \n*   Чистый и современный дизайн"
+      },
+      "link": "https://ecomarket.vercel.app/"
+    },
+    {
+      "image": "/images/projects/coral-shop.png",
+      "title": {
+        "en": "Coral Shop – Modern Online Store UI",
+        "ru": "Coral Shop — Современный интерфейс интернет‑магазина"
+      },
+      "body": {
+        "en": "A clean and stylish e-commerce frontend for a fashion shop. Features product grid, intuitive navigation, and responsive design. Built with **HTML, CSS, and JavaScript** for fast and lightweight performance.\n\n**Features:**\n\n*   Product grid with hover effects\n    \n*   Mobile-friendly responsive layout\n    \n*   Simple, elegant design for e-commerce",
+        "ru": "Чистый и стильный фронтенд для магазина одежды. Включает сетку товаров, удобную навигацию и адаптивный дизайн. Сделано на **HTML, CSS и JavaScript** для высокой скорости и лёгкости.\n\n**Функции:**\n\n*   Сетка товаров с эффектами наведения\n    \n*   Адаптивная верстка для мобильных устройств\n    \n*   Лёгкий и современный дизайн для e-commerce"
+      },
+      "link": "https://artpetrovskyi.github.io/coral-shop/"
+    },
+    {
+      "image": "/images/projects/welbex.png",
+      "title": {
+        "en": "Welbex – Stylish Landing with Cool Animations",
+        "ru": "Welbex — Стильный лендинг с классными анимациями"
+      },
+      "body": {
+        "en": "A sleek landing page built with HTML, CSS, and JavaScript featuring smooth, eye-catching animations and modern design.\n\n**Features:**\n\n*   Stylish and modern UI\n    \n*   Smooth CSS and JS animations\n    \n*   Fully responsive layout",
+        "ru": "Красивый лендинг на HTML, CSS и JavaScript с плавными эффектами и современным дизайном.\n\n**Функции:**\n\n*   Стильный и современный интерфейс\n    \n*   Плавные CSS и JS анимации\n    \n*   Адаптивная верстка"
+      },
+      "link": "https://artpetrovskyi.github.io/welbex/"
+    },
+    {
+      "image": "/images/projects/teplodom.png",
+      "title": {
+        "en": "Teplodom – Clean Corporate Website",
+        "ru": "Teplodom — корпоративный сайт"
+      },
+      "body": {
+        "en": "A professional landing page built with HTML, CSS, and JavaScript. Features clear layout, responsive design, and user-friendly navigation for a heating solutions company.\n\n**Features:**\n\n*   Clean and minimalistic design\n    \n*   Responsive layout for all devices\n    \n*   Easy navigation and clear structure",
+        "ru": "Профессиональный лендинг на HTML, CSS и JavaScript. Четкий макет, адаптивный дизайн и удобная навигация для компании по отоплению.\n\n**Функции:**\n\n*   Чистый и минималистичный дизайн\n    \n*   Адаптивная верстка под все устройства\n    \n*   Простая и понятная навигация"
+      },
+      "link": "https://artpetrovskyi.github.io/teplodom/"
+    },
+    {
+      "image": "/images/projects/perfume-shop.png",
+      "title": {
+        "en": "Perfume Shop – Stylish Online Store",
+        "ru": "Perfume Shop — Стильный интернет-магазин"
+      },
+      "body": {
+        "en": "A sleek perfume e-commerce landing page built with HTML, CSS, and JavaScript. Features modern design, product showcase, and responsive layout.\n\n**Features:**\n\n*   Modern, elegant UI\n    \n*   Product showcase section\n    \n*   Fully responsive design",
+        "ru": "Красивый лендинг парфюмерного магазина на HTML, CSS и JavaScript. Современный дизайн, презентация товаров и адаптивность.\n\n**Функции:**\n\n*   Современный и элегантный интерфейс\n    \n*   Раздел с товарами\n    \n*   Полная адаптивность"
+      },
+      "link": "https://artpetrovskyi.github.io/perfume-shop/"
+    }
+  ]
+}
