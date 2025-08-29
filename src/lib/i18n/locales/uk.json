@@ -1,11 +1,15 @@
 {
   "common": {
-    "pageTitle": "Hutina Anastasiia - UX/UI дизайнер",
-    "name": "",
+    "pageTitle": "Гутіна Анастасія - UX/UI дизайнер",
+    "firstName": "Анастасія",
+    "lastName": "Гутіна",
+    "middleName": "Сергіївна",
     "error": ""
   },
   "hero": {
-    "title": "",
-    "description": ""
+    "title": "UX/UI",
+    "subtitle": "Дизайнер",
+    "action": "Я створюю дизайни, які не лише гарно виглядають, а й працюють.",
+    "description": "Дизайни, що змушують людей відчувати, перш ніж думати."
   }
 }

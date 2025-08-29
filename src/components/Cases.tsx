@@ -10,11 +10,10 @@ import {
 
 const CASES = [
   {
-    title: "Santehprostir text",
+    title: "Santehprostir",
     image: "santehprostir.jpg",
     body: "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
     href: "#",
-    wide: true,
   },
   {
     title: "Barbara Palvin",
@@ -23,41 +22,34 @@ const CASES = [
     href: "#",
   },
   {
-    title: "SantehProstir",
-    image: "santehprostir.jpg",
-    body: "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
+    title: "AI assistant",
+    image: "ai-smm-assistant.jpg",
+    body: "Design of an AI SMM assistant for a marketing company",
     href: "#",
   },
   {
-    title: "Barbara Palvin1",
-    image: "barbara-palvin.jpg",
-    body: "Landing design for a fashion brand with an emphasis on atmosphere",
-    href: "#",
-  },
-  {
-    title: "SantehProstir2",
-    image: "santehprostir.jpg",
-    body: "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
-    href: "#",
-  },
-  {
-    title: "Barbara Palvin3",
-    image: "barbara-palvin.jpg",
-    body: "Landing design for a fashion brand with an emphasis on atmosphere",
+    title: "Ministry of Economy",
+    image: "ministry-of-economy.jpg",
+    body: "Ux/Ui design website  of the Ministry of Economy of Ukraine",
     href: "#",
   },
 ];
 
-const OFFERS = [
+const SERVICES = [
   {
-    title: "Landing  ",
+    title: "Landing pages",
     image: "ai-smm-assistant.jpg",
-    body: "Design of an AI SMM assistant for a marketing company",
+    body: "I create high-converting landing pages that capture attention from the first click and effectively turn visitors into customers.",
   },
   {
-    title: "State website",
+    title: "Portfolios",
     image: "ministry-of-economy.jpg",
-    body: "Ux/Ui design website  of the Ministry of Economy of Ukraine",
+    body: "I design visually stunning and functional portfolios that best showcase your achievements and professional skills.",
+  },
+  {
+    title: "Mobile",
+    image: "santehprostir.jpg",
+    body: "I design intuitive and aesthetic mobile user interfaces that ensure a seamless user experience and boost engagement.",
   },
 ];
 
@@ -101,7 +93,7 @@ export default function Cases() {
       <div className="border-foreground border- mt-10 border-t pt-10">
         <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
           {/* <li></li> */}
-          {OFFERS.map((item) => (
+          {SERVICES.map((item) => (
             <li key={item.title}>
               <OfferCard {...item} />
             </li>

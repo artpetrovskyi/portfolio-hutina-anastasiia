@@ -10,19 +10,29 @@ import { Button } from "./ui/button";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useState } from "react";
 import { AlignJustify } from "lucide-react";
+import { useLanguage } from "@/hooks/useLanguage";
 
 const NAV_LINKS = [
   {
     anchor: "about-me",
-    title: "About me",
+    title: {
+      en: "About me",
+      uk: "Про мене",
+    },
   },
   {
     anchor: "cases",
-    title: "Cases",
+    title: {
+      en: "Cases",
+      uk: "Кейсы",
+    },
   },
   {
     anchor: "contacts",
-    title: "Contacts",
+    title: {
+      en: "Contacts",
+      uk: "Контакти",
+    },
   },
 ] as const;
 
@@ -61,6 +71,7 @@ const CONTACTS = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const { currentLang } = useLanguage();
 
   return (
     <header className="bg-background absolute top-0 left-0 z-10 w-full">
@@ -87,7 +98,7 @@ export default function Header() {
                     duration={500}
                     className="uppercase"
                   >
-                    {title}
+                    {title[currentLang]}
                   </Link>
                 </Button>
               </li>
@@ -118,7 +129,7 @@ export default function Header() {
                         className="text-3xl uppercase"
                         onClick={() => setOpen(false)}
                       >
-                        {title}
+                        {title[currentLang]}
                       </Link>
                     </li>
                   ))}

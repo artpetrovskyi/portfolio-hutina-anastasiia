@@ -1,11 +1,15 @@
 {
   "common": {
     "pageTitle": "Hutina Anastasiia - UX/UI designer",
-    "name": "",
+    "firstName": "Anastasiia",
+    "lastName": "Hutina",
+    "middleName": "Sergiyevna",
     "error": ""
   },
   "hero": {
-    "title": "",
-    "description": ""
+    "title": "UX/UX",
+    "subtitle": "Designer",
+    "action": "I create designs that don't just look good, they work.",
+    "description": "Designs that make people feel before they think."
   }
 }
