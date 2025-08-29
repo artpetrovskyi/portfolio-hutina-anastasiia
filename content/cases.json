@@ -1,0 +1,37 @@
+{
+  "cases": {
+    "title": {
+      "en": "Cases",
+      "uk": "Кейси"
+    },
+    "items": [
+      {
+        "image": "cases_images/example-case.jpg",
+        "title": {
+          "en": "Case Example Title",
+          "uk": "Приклад назви кейсу"
+        },
+        "body": {
+          "en": "Example case description in English.",
+          "uk": "Приклад опису кейсу українською."
+        },
+        "link": "https://example.com/case"
+      }
+    ]
+  },
+  "services": {
+    "items": [
+      {
+        "image": "cases_images/example-service.jpg",
+        "title": {
+          "en": "Service Example Title",
+          "uk": "Приклад назви послуги"
+        },
+        "body": {
+          "en": "Example service description in English.",
+          "uk": "Приклад опису послуги українською."
+        }
+      }
+    ]
+  }
+}
