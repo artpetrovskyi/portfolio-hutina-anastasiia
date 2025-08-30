@@ -8,6 +8,11 @@ media:
     label: Cases images
     input: images/cases
     output: /images/cases
+
+  - name: icons
+    label: Icons
+    input: images/icons
+    output: /images/icons
     
 content:
   - name: general
@@ -129,7 +134,12 @@ content:
               - { name: title, label: Title, type: string, required: true }
               - { name: label, label: Label, type: string, required: true }
               - { name: link, label: Link, type: string, required: true }
-              - { name: icon, label: Icon (.svg), type: string }
+              - name: icon
+                label: Icon
+                type: image
+                options:
+                  media: icons
+                  extensions: [svg]
               
       # Footer Section
       - name: footer
