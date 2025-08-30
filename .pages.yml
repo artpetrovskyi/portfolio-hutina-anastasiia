@@ -66,17 +66,27 @@ content:
               
       # About Section
       - name: about
-        label: About
+        label: About me
         type: object
         fields:
-          - { name: photo, label: Photo, type: image, required: true }
-          - name: body
-            label: Body
+          - name: items
+            label: Items
             type: object
+            list: true
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
-              
+              - name: title
+                label: Title
+                type: object
+                fields:
+                  - { name: en, label: English, type: string, required: true }
+                  - { name: uk, label: Russian, type: string, required: true }
+              - name: body
+                label: Body
+                type: object
+                fields:
+                  - { name: en, label: English, type: string, required: true }
+                  - { name: uk, label: Russian, type: string, required: true }
+
       # Contacts Section
       - name: contacts
         label: Contacts
