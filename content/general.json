@@ -28,6 +28,14 @@
     "actionButtonText": {
       "en": "Advice",
       "uk": "Консультація"
+    },
+    "drawerTitle": {
+      "en": "Ask me anything",
+      "uk": "Запитати мене"
+    },
+    "drawerSubitle": {
+      "en": "I will answer you as soon as possible",
+      "uk": "Я відповім вам найближчим часом"
     }
   },
   "about": {
