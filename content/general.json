@@ -1,1 +1,42 @@
-{}
+{
+  "hero": {
+    "image": "/images/hero.png",
+    "firstName": {
+      "en": "Anastasiia",
+      "uk": "Анастасія"
+    },
+    "middleName": {
+      "en": "Sergiyevna",
+      "uk": "Сергіївна"
+    },
+    "title": {
+      "en": "UX/UX",
+      "uk": "UX/UX"
+    },
+    "subtitle": {
+      "en": "Designer",
+      "uk": "Дизайнер"
+    },
+    "actionText": {
+      "en": "I create designs that don't just look good, they work.",
+      "uk": "Я створюю дизайни, які не лише гарно виглядають, а й працюють."
+    },
+    "descriptionText": {
+      "en": "Designs that make people feel before they think.",
+      "uk": "Дизайни, що змушують людей відчувати, перш ніж думати."
+    },
+    "actionButtonText": {
+      "en": "Advice",
+      "uk": "Консультація"
+    }
+  },
+  "process": {
+    "mainDescription": {
+      "en": "This is a general outline. Each project is unique, so the process may vary depending on your goals and needs.",
+      "uk": "Це загальний план. Кожен проєкт унікальний, тому процес може відрізнятися залежно від ваших цілей та потреб."
+    }
+  },
+  "footer": {
+    "image": "/images/footer_desktop.png"
+  }
+}
