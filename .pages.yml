@@ -25,44 +25,44 @@ content:
             label: First name
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
           - name: middleName
             label: Middle name
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
           - name: title
             label: Title
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
           - name: subtitle
             label: Subtitle
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
           - name: actionText
             label: Action text
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
           - name: descriptionText
             label: Description text
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
           - name: actionButtonText
             label: Action Button Text
             type: object
             fields:
-              - { name: en, label: English, type: rich-text, required: true }
-              - { name: uk, label: Russian, type: rich-text, required: true }
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Russian, type: string, required: true }
               
       # About Section
       - name: about
