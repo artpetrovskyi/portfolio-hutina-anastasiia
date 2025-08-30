@@ -68,6 +68,18 @@ content:
             fields:
               - { name: en, label: English, type: string, required: true }
               - { name: uk, label: Ukrainian, type: string, required: true }
+          - name: drawerTitle
+            label: Drawer title (with contacts)
+            type: object
+            fields:
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
+          - name: drawerSubitle
+            label: Drawer subtitle (with contacts)
+            type: object
+            fields:
+              - { name: en, label: English, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
               
       # About Section
       - name: about
