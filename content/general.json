@@ -147,7 +147,31 @@
       {
         "title": "@anastasiahutina",
         "label": "telegram",
-        "link": "https://t.me/anastasiahutina"
+        "link": "https://t.me/anastasiahutina",
+        "icon": "/images/icons/telegram.svg"
+      },
+      {
+        "title": "Anastasiia Hutina",
+        "label": "behance",
+        "link": "https://www.behance.net/anastasiiahutina",
+        "icon": "/images/icons/behance.svg"
+      },
+      {
+        "title": "+380 67 010 33 77",
+        "label": "whatsapp",
+        "link": "https://wa.me/+380670103377",
+        "icon": "/images/icons/whatsapp.svg"
+      },
+      {
+        "title": "@steisi.design",
+        "label": "instagram",
+        "link": "https://instagram.com/steisi.design",
+        "icon": "/images/icons/instagram.svg"
+      },
+      {
+        "title": "Hutinaanastasiia@ukr.net",
+        "label": "email",
+        "link": "mailto:Hutinaanastasiia@ukr.net"
       }
     ]
   },
