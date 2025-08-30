@@ -87,21 +87,6 @@ content:
                   - { name: en, label: English, type: rich-text, required: true }
                   - { name: uk, label: Ukrainian, type: rich-text, required: true }
 
-      # Contacts Section
-      - name: contacts
-        label: Contacts
-        type: object
-        fields:
-          - name: items
-            label: Items
-            type: object
-            list: true
-            fields:
-              - { name: title, label: Title, type: string, required: true }
-              - { name: name, label: Name, type: string, required: true }
-              - { name: link, label: Link, type: string, required: true }
-              - { name: icon, label: Icon SVG, type: string, required: true }
-
       # Process Section
       - name: process
         label: Process
@@ -130,6 +115,21 @@ content:
                 fields:
                   - { name: en, label: English, type: rich-text, required: true }
                   - { name: uk, label: Ukrainian, type: rich-text, required: true }
+
+      # Contacts Section
+      - name: contacts
+        label: Contacts
+        type: object
+        fields:
+          - name: items
+            label: Items
+            type: object
+            list: true
+            fields:
+              - { name: title, label: Title, type: string, required: true }
+              - { name: label, label: Label, type: string, required: true }
+              - { name: link, label: Link, type: string, required: true }
+              - { name: icon, label: Icon (.svg), type: string }
 
 
   - name: cases
