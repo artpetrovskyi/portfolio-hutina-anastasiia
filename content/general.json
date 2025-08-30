@@ -78,7 +78,69 @@
     "mainDescription": {
       "en": "This is a general outline. Each project is unique, so the process may vary depending on your goals and needs.",
       "uk": "Це загальний план. Кожен проєкт унікальний, тому процес може відрізнятися залежно від ваших цілей та потреб."
-    }
+    },
+    "items": [
+      {
+        "title": {
+          "en": "Discovery",
+          "uk": "Дослідження"
+        },
+        "body": {
+          "en": "We define your goals, audience, and visual direction. You fill out a brief — or we chat directly.",
+          "uk": "Ми визначаємо ваші цілі, аудиторію та візуальний напрямок. Ви заповнюєте бриф — або ми спілкуємось напряму."
+        }
+      },
+      {
+        "title": {
+          "en": "Strategy",
+          "uk": "Стратегія"
+        },
+        "body": {
+          "en": "I create a custom design and present it. Includes mobile adaptation and 1–2 rounds of revisions.",
+          "uk": "Я створюю та презентую кастомний дизайн. Це включає мобільну адаптацію та 1-2 раунди правок."
+        }
+      },
+      {
+        "title": {
+          "en": "Design",
+          "uk": "Дизайн"
+        },
+        "body": {
+          "en": "I create a custom design and present it. Includes mobile adaptation and 1–2 rounds of revisions.",
+          "uk": "Я створюю індивідуальний дизайн і презентую його. Це включає мобільну адаптацію та 1–2 раунди правок."
+        }
+      },
+      {
+        "title": {
+          "en": "Handoff",
+          "uk": "Передача проєкту"
+        },
+        "body": {
+          "en": "You receive the full Figma file + dev guide. I can also recommend a trusted developer.",
+          "uk": "Ви отримуєте повний файл Figma + гайд для розробника. Я також можу порекомендувати перевіреного розробника."
+        }
+      },
+      {
+        "title": {
+          "en": "Wrap-up",
+          "uk": "Підсумок"
+        },
+        "body": {
+          "en": "Final prep: fonts, images, integrations, and content placement — ready for handoff or development.",
+          "uk": "Финальна підготовка: шрифти, зображення, інтеграції та розміщення контенту — готовність до передачі розробнику або запуску."
+        }
+      },
+      {
+        "title": {
+          "en": "Post-project Support",
+          "uk": "Підтримка після проєкту"
+        },
+        "body": {
+          "en": "I stay in touch for follow-ups, improvements, or new tasks — I’ve got you covered.",
+          "uk": "Я залишаюся на зв'язку для подальших питань, покращень чи нових завдань — ви завжди можете на мене розраховувати."
+        }
+      }
+    ]
   },
   "footer": {
     "pc": {
