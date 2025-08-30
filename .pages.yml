@@ -20,7 +20,7 @@ content:
         label: Hero
         type: object
         fields:
-          - { name: photo, label: Photo, type: image, required: true }
+          - { name: image, label: Image, type: image, required: true }
           - name: firstName
             label: First name
             type: object
@@ -130,6 +130,13 @@ content:
               - { name: label, label: Label, type: string, required: true }
               - { name: link, label: Link, type: string, required: true }
               - { name: icon, label: Icon (.svg), type: string }
+              
+      # Footer Section
+      - name: footer
+        label: Footer
+        type: object
+        fields:
+          - { name: image, label: Image, type: image, required: true }
 
 
   - name: cases
