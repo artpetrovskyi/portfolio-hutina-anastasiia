@@ -140,12 +140,12 @@ content:
             label: Image for desktop (min-1407x310px | best-2709x506px)
             type: object
             fields:
-              - { name: image, label: Image, type: image, required: true }
+              - { name: image, label: Image (.png), type: image, required: true }
           - name: mob
             label: Image for mobile (min-411x214px | best-704x344px)
             type: object
             fields:
-              - { name: image, label: Image, type: image, required: true }
+              - { name: image, label: Image (.png), type: image, required: true }
 
   - name: cases
     label: Cases
