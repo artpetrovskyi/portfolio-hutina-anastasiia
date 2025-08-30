@@ -37,6 +37,11 @@
     }
   },
   "footer": {
-    "image": "/images/footer_desktop.png"
+    "pc": {
+      "image": "/images/footer_desktop.png"
+    },
+    "mob": {
+      "image": "/images/footer_mobile.png"
+    }
   }
 }
