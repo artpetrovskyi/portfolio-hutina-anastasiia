@@ -30,6 +30,50 @@
       "uk": "Консультація"
     }
   },
+  "about": {
+    "items": [
+      {
+        "title": {
+          "en": "personality",
+          "uk": "Особистість"
+        },
+        "body": {
+          "en": "I'm Anastasiia. I value honesty, deep conversations, and real connection. I believe in clear communication and a respectful, mindful approach to every project. Trust and mutual understanding always come first.",
+          "uk": "Я — Анастасія. Ціную чесність, глибокі розмови та справжні зв'язки. Вірю в чітку комунікацію та поважний, усвідомлений підхід до кожного проєкту. Довіра та взаєморозуміння завжди на першому місці."
+        }
+      },
+      {
+        "title": {
+          "en": "designer",
+          "uk": "Дизайнер"
+        },
+        "body": {
+          "en": "I'm a web designer who helps brands look modern, structured, and confident. I love clean layouts, strong typography, and well-thought-out visuals. For me, design isn't decoration — it's clarity, function, and feeling.",
+          "uk": "Я вебдизайнер, який допомагає брендам виглядати сучасно, структуровано та впевнено. Я люблю лаконічні макети, виразну типографіку та продуманий візуал. Для мене дизайн — це не прикраса, а ясність, функціональність та емоції."
+        }
+      },
+      {
+        "title": {
+          "en": "What I do",
+          "uk": "Що я роблю?"
+        },
+        "body": {
+          "en": "I create websites that work: landing pages, portfolios, redesigns, and mobile UI. Every project is personal — I focus on details, adapt to your goals, and always design with care. My main tool is Figma.",
+          "uk": "Я створюю сайти, які працюють: лендинги, портфоліо, редизайни та мобільні інтерфейси. Кожен проєкт для мене особистий — я зосереджуюсь на деталях, адаптуюсь до ваших цілей та завжди створюю дизайн з турботою. Мій основний інструмент — Figma."
+        }
+      },
+      {
+        "title": {
+          "en": "beyond design",
+          "uk": "Поза дизайном"
+        },
+        "body": {
+          "en": "Outside of design, I train and stay active — sport gives me energy and focus. I enjoy nature, coffee, and moments away from the screen. I believe great design comes not just from skills, but from living fully and observing the world around us.",
+          "uk": "Окрім дизайну, я займаюся спортом, щоб підтримувати енергію та фокус. Люблю природу, каву та моменти далеко від екрана. Вважаю, що чудовий дизайн народжується не лише з навичок, а й з насиченого життя та спостереження за світом навколо."
+        }
+      }
+    ]
+  },
   "process": {
     "mainDescription": {
       "en": "This is a general outline. Each project is unique, so the process may vary depending on your goals and needs.",
