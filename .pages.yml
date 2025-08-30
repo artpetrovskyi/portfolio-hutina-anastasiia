@@ -26,47 +26,47 @@ content:
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
           - name: middleName
             label: Middle name
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
           - name: title
             label: Title
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
           - name: subtitle
             label: Subtitle
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
           - name: actionText
             label: Action text
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
           - name: descriptionText
             label: Description text
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
           - name: actionButtonText
             label: Action Button Text
             type: object
             fields:
               - { name: en, label: English, type: string, required: true }
-              - { name: uk, label: Russian, type: string, required: true }
+              - { name: uk, label: Ukrainian, type: string, required: true }
               
       # About Section
       - name: about
-        label: About me
+        label: About
         type: object
         fields:
           - name: items
@@ -79,13 +79,13 @@ content:
                 type: object
                 fields:
                   - { name: en, label: English, type: string, required: true }
-                  - { name: uk, label: Russian, type: string, required: true }
+                  - { name: uk, label: Ukrainian, type: string, required: true }
               - name: body
                 label: Body
                 type: object
                 fields:
-                  - { name: en, label: English, type: string, required: true }
-                  - { name: uk, label: Russian, type: string, required: true }
+                  - { name: en, label: English, type: rich-text, required: true }
+                  - { name: uk, label: Ukrainian, type: rich-text, required: true }
 
       # Contacts Section
       - name: contacts
@@ -102,9 +102,9 @@ content:
               - { name: link, label: Link, type: string, required: true }
               - { name: icon, label: Icon SVG, type: string, required: true }
 
-      # Skills Section
-      - name: skills
-        label: Skills
+      # Process Section
+      - name: process
+        label: Process
         type: object
         fields:
           - name: development
