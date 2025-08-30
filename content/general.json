@@ -179,7 +179,8 @@
       {
         "title": "Hutinaanastasiia@ukr.net",
         "label": "email",
-        "link": "mailto:Hutinaanastasiia@ukr.net"
+        "link": "mailto:Hutinaanastasiia@ukr.net",
+        "icon": "/images/icons/email.svg"
       }
     ]
   },
