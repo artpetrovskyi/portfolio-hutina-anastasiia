@@ -1,1 +1,16 @@
-{}
+{
+  "cases_section": [
+    {
+      "image": "/images/cases/barbara-palvin.jpg",
+      "title": {
+        "en": "Landing Page",
+        "uk": "Landing Page"
+      },
+      "body": {
+        "en": "Landing design for a fashion brand with an emphasis on atmosphere",
+        "uk": "Landing design for a fashion brand with an emphasis on atmosphere"
+      },
+      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
+    }
+  ]
+}
