@@ -47,7 +47,7 @@ function App() {
               <Contacts contacts={generalData?.contacts} />
             </div>
           </main>
-          <Footer />
+          <Footer data={generalData?.footer} />
         </>
       )}
     </>
