@@ -116,7 +116,7 @@ content:
               - { name: en, label: English, type: string, required: true }
               - { name: uk, label: Ukrainian, type: string, required: true }
           - name: items
-            label: Items
+            label: Items (max = 6)
             type: object
             list: true
             fields:
