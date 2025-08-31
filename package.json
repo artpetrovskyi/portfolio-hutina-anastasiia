@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "pages-deploy": "gh-pages -d dist",
-    "fetch-content": "rm -rf tmp_gh_pages && git clone --depth 1 --filter=blob:none --sparse --branch gh-pages https://github.com/artpetrovskyi/portfolio.git tmp_gh_pages && cd tmp_gh_pages && git sparse-checkout set content images && rm -rf ../dist/content ../dist/images && cp -r content ../dist/content && cp -r images ../dist/images && cd .. && rm -rf tmp_gh_pages",
+    "fetch-content": "rm -rf tmp_gh_pages && git clone --depth 1 --filter=blob:none --sparse --branch gh-pages https://github.com/artpetrovskyi/portfolio-hutina-anastasiia.git tmp_gh_pages && cd tmp_gh_pages && git sparse-checkout set content images && rm -rf ../dist/content ../dist/images && cp -r content ../dist/content && cp -r images ../dist/images && cd .. && rm -rf tmp_gh_pages",
     "deploy": "npm run build && npm run fetch-content && npm run pages-deploy"
   },
   "dependencies": {

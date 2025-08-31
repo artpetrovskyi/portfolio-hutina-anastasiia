@@ -6,16 +6,16 @@ export default function Footer() {
       <Reveal>
         <div className="ibg hidden pb-[22%] md:block">
           <img
-            src="./images/footer_desktop.png"
+            src="./images/quote-pc.png"
             alt="footer"
             className="pointer-events-none object-contain"
-            width={1408}
+            width={1407}
             height={310}
           />
         </div>
         <div className="ibg pb-[52%] md:hidden">
           <img
-            src="./images/footer_mobile.png"
+            src="./images/quote-mob.png"
             alt="footer"
             className="pointer-events-none object-contain"
             width={724}

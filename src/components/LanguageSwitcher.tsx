@@ -51,7 +51,7 @@ export function LanguageSwitcher() {
             </Button>
           </DropdownMenuTrigger>
 
-          <DropdownMenuContent align="center" className="w-auto">
+          <DropdownMenuContent align="center" className="w-auto rounded-none">
             {languages
               .filter((lang) => lang !== currentLang)
               .map((lang) => (
@@ -63,7 +63,7 @@ export function LanguageSwitcher() {
                       changeLanguage(lang);
                     }, 0);
                   }}
-                  className="justify-center text-xl uppercase"
+                  className="justify-center text-xl uppercase rounded-none"
                 >
                   <span>{lang}</span>
                 </DropdownMenuItem>

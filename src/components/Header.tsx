@@ -12,6 +12,7 @@ import { useState } from "react";
 import { AlignJustify } from "lucide-react";
 import { useLanguage } from "@/hooks/useLanguage";
 import { motion } from "motion/react";
+import type { ContactsData } from "@/lib/types";
 
 const NAV_LINKS = [
   {
@@ -37,49 +38,56 @@ const NAV_LINKS = [
   },
 ] as const;
 
-const CONTACTS = [
-  {
-    label: "telegram",
-    title: "@anastasiahutina",
-    href: "https://t.me/anastasiahutina",
-    icon: "telegram.svg",
-  },
-  {
-    label: "behance",
-    title: "Anastasiia Hutina",
-    href: "https://www.behance.net/anastasiiahutina",
-    icon: "behance.svg",
-  },
-  {
-    label: "whatsapp",
-    title: "+380 67 010 33 77",
-    href: "tel:+380670103377",
-    icon: "whatsapp.svg",
-  },
-  {
-    label: "instagram",
-    title: "@steisi.design",
-    href: "https://instagram.com/steisi.design",
-    icon: "instagram.svg",
-  },
-  {
-    label: "email",
-    title: "Hutinaanastasiia@ukr.net",
-    href: "mailto:Hutinaanastasiia@ukr.net",
-    icon: "email.svg",
-  },
-];
+interface Props {
+  contacts?: ContactsData;
+}
 
-export default function Header() {
+export default function Header({ contacts }: Props) {
   const [open, setOpen] = useState(false);
   const { currentLang } = useLanguage();
+  const contactsList = contacts?.items || [];
+
+  // For navigation
+  const navListVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.3, //  wait before starting stagger
+        staggerChildren: 0.15,
+      },
+    },
+  };
+  const navItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
+
+  // For contacts
+  const contactsListVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        delayChildren: 0.6, //  wait before starting stagger
+        staggerChildren: 0.15,
+      },
+    },
+  };
+
+  const contactsItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    show: { opacity: 1, y: 0 },
+  };
 
   return (
-    <header className="bg-background absolute top-0 left-0 z-10 w-full">
+    <header className="bg-background z-10 w-full">
       <motion.div
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.6, delay: 1.6 }}
         className="container flex items-center py-5 text-xl md:gap-5 md:text-2xl"
       >
         <div className="order-1 flex-1">
@@ -112,7 +120,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        <div className="order-3 block min-[800px]:hidden">
+        <div className="order-3 flex items-center min-[800px]:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
               <Button size="icon" variant="ghost">
@@ -123,9 +131,14 @@ export default function Header() {
               <SheetTitle className="sr-only">Menu</SheetTitle>
               <SheetDescription className="sr-only">Menu</SheetDescription>
               <nav className="flex-1">
-                <ul className="flex flex-col items-end gap-10">
+                <motion.ul
+                  className="flex flex-col items-end gap-10"
+                  variants={navListVariants}
+                  initial="hidden"
+                  animate={open ? "show" : "hidden"} // trigger animation on open
+                >
                   {NAV_LINKS.map(({ anchor, title }) => (
-                    <li key={anchor}>
+                    <motion.li key={anchor} variants={navItemVariants}>
                       <Link
                         to={anchor}
                         href={`#${anchor}`}
@@ -137,29 +150,37 @@ export default function Header() {
                       >
                         {title[currentLang]}
                       </Link>
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </nav>
-              <ul className="space-y-5">
-                {CONTACTS.map((contact) => (
-                  <li key={contact.label}>
+              <motion.ul
+                variants={contactsListVariants}
+                initial="hidden"
+                animate={open ? "show" : "hidden"}
+                className="space-y-5"
+              >
+                {contactsList.map((contact) => (
+                  <motion.li
+                    variants={contactsItemVariants}
+                    key={contact.label}
+                  >
                     <Button
                       asChild
                       variant="outline"
                       size="icon"
-                      className="w-full"
+                      className="min-h-12 w-full"
                     >
-                      <a href={contact.href} target="_blank" rel="noreferrer">
+                      <a href={contact.link} target="_blank" rel="noreferrer">
                         <img
-                          src={`./images/icons/${contact.icon}`}
+                          src={import.meta.env.VITE_API_URL + contact.icon}
                           alt={contact.title}
                         />
                       </a>
                     </Button>
-                  </li>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
             </SheetContent>
           </Sheet>
         </div>

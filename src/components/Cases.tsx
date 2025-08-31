@@ -1,4 +1,5 @@
-import CaseCard, { OfferCard } from "./CaseCard";
+import { useFetchContent } from "@/hooks/useFetchContent";
+import CaseCard from "./CaseCard";
 import Reveal from "./Reveal";
 import SectionTop from "./SectionTop";
 import {
@@ -8,84 +9,81 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-
-const CASES = [
-  {
-    title: "Santehprostir",
-    image: "santehprostir.jpg",
-    body: "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
-    href: "#",
-  },
-  {
-    title: "Barbara Palvin",
-    image: "barbara-palvin.jpg",
-    body: "Landing design for a fashion brand with an emphasis on atmosphere",
-    href: "#",
-  },
-  {
-    title: "AI assistant",
-    image: "ai-smm-assistant.jpg",
-    body: "Design of an AI SMM assistant for a marketing company",
-    href: "#",
-  },
-  {
-    title: "Ministry of Economy",
-    image: "ministry-of-economy.jpg",
-    body: "Ux/Ui design website  of the Ministry of Economy of Ukraine",
-    href: "#",
-  },
-];
-
-const SERVICES = [
-  {
-    title: "Landing pages",
-    image: "ai-smm-assistant.jpg",
-    body: "I create high-converting landing pages that capture attention from the first click and effectively turn visitors into customers.",
-  },
-  {
-    title: "Portfolios",
-    image: "ministry-of-economy.jpg",
-    body: "I design visually stunning and functional portfolios that best showcase your achievements and professional skills.",
-  },
-  {
-    title: "Mobile",
-    image: "santehprostir.jpg",
-    body: "I design intuitive and aesthetic mobile user interfaces that ensure a seamless user experience and boost engagement.",
-  },
-];
+import type { CasesData } from "@/lib/types";
+import { useTranslation } from "react-i18next";
+import LoadingError from "./LoadingError";
 
 export default function Cases() {
+  const { t } = useTranslation();
+  const { data, status, error } =
+    useFetchContent<CasesData>("content/cases.json");
+
+  const casesData = data?.items ?? [];
+
+  // ---- Status handling ----
+  if (status === "error") {
+    return (
+      <section id="cases" className="container">
+        <SectionTop>{t("cases.title")}</SectionTop>
+        <Reveal>
+          <LoadingError
+            text="Error loading cases | Помилка завантаження кейсів"
+            error={error}
+          />
+        </Reveal>
+      </section>
+    );
+  }
+
+  if (status === "loading") {
+    return (
+      <section id="cases" className="container">
+        <SectionTop>{t("cases.title")}</SectionTop>
+        <Reveal>
+          <p className="opacity-60">{t("loading")}...</p>
+        </Reveal>
+      </section>
+    );
+  }
+
+  if (!casesData.length) {
+    return null; // nothing to show
+  }
+
+  // ---- Success ----
   return (
     <section id="cases" className="container">
       <Carousel
-        opts={{
-          align: "start",
-        }}
+        opts={{ align: "start" }}
         className="max-[500px]:[&_.overflow-hidden]:!overflow-visible"
       >
-        {/* Top */}
+        {/* Header */}
         <div className="flex flex-col justify-between min-[500px]:flex-row min-[500px]:gap-5">
-          <SectionTop>Cases</SectionTop>
-          <Reveal className="mt-auto">
-            <div className="mb-6 flex items-end gap-5 min-[500px]:mb-10">
-              <CarouselPrevious
-                variant="secondary"
-                className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
-              />
-              <CarouselNext
-                variant="secondary"
-                className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
-              />
-            </div>
-          </Reveal>
+          <SectionTop>{t("cases.title")}</SectionTop>
+
+          {casesData.length > 1 && (
+            <Reveal className="mt-auto">
+              <div className="mb-6 flex items-end gap-5 min-[500px]:mb-10">
+                <CarouselPrevious
+                  variant="secondary"
+                  className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
+                />
+                <CarouselNext
+                  variant="secondary"
+                  className="bg-gradient static min-h-12 translate-0 rounded-none border border-white px-10 max-[500px]:flex-1 lg:-translate-y-5"
+                />
+              </div>
+            </Reveal>
+          )}
         </div>
 
+        {/* Content */}
         <Reveal>
           <CarouselContent className="-ml-5">
-            <CarouselItem className="hidden pl-5 md:basis-[45%] lg:basis-[40%] xl:block xl:basis-1/3"></CarouselItem>
-            {CASES.map((item) => (
+            <CarouselItem className="hidden pl-5 md:basis-[45%] lg:basis-[40%] xl:block xl:basis-1/3" />
+            {casesData.map((item) => (
               <CarouselItem
-                key={item.title}
+                key={item.link}
                 className="basis-full pl-5 min-[500px]:basis-[80%] sm:basis-[55%] md:basis-[45%] lg:basis-[40%] xl:basis-1/3"
               >
                 <CaseCard {...item} />
@@ -94,19 +92,6 @@ export default function Cases() {
           </CarouselContent>
         </Reveal>
       </Carousel>
-
-      <Reveal>
-        <div className="border-foreground border- mt-10 border-t pt-10">
-          <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3">
-            {/* <li></li> */}
-            {SERVICES.map((item) => (
-              <li key={item.title}>
-                <OfferCard {...item} />
-              </li>
-            ))}
-          </ul>
-        </div>
-      </Reveal>
     </section>
   );
 }

@@ -125,9 +125,9 @@
     @apply bg-background text-foreground font-manrope text-lg font-light tracking-tight;
   }
 
-  /* svg {
+  svg {
     @apply block h-full w-full;
-  } */
+  }
 }
 
 @layer components {

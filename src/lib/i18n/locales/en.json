@@ -6,10 +6,16 @@
     "middleName": "Sergiyevna",
     "error": ""
   },
-  "hero": {
-    "title": "UX/UX",
-    "subtitle": "Designer",
-    "action": "I create designs that don't just look good, they work.",
-    "description": "Designs that make people feel before they think."
+  "about-me": {
+    "title": "About me"
+  },
+  "cases": {
+    "title": "Cases"
+  },
+  "my-process": {
+    "title": "My Process"
+  },
+  "contacts": {
+    "title": "Contacts"
   }
 }
