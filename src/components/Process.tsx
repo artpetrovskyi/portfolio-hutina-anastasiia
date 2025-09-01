@@ -11,12 +11,14 @@ interface Props {
 export default function Process({ data }: Props) {
   const { t } = useTranslation();
   const { currentLang } = useLanguage();
-
   const processList = data?.items ?? [];
 
   if (!processList.length) {
     return null;
   }
+
+  // Limit to maximum 6 processes, but use actual length if less
+  // const maxProcesses = Math.min(processList.length, 6);
 
   const columnClasses = [
     "col-start-1 row-start-1 col-span-6 row-span-1 xl:col-span-3",
@@ -43,23 +45,21 @@ export default function Process({ data }: Props) {
         </li>
 
         {/* PROCESS items start from columnClasses[1] */}
-        {processList
-          .slice(0, columnClasses.length - 1)
-          .map(({ title, body }, i) => (
-            <li key={title.en} className={columnClasses[i + 1]}>
-              <Reveal className="h-full">
-                <div className="flex h-full flex-col border border-white p-3 leading-tight">
-                  <div className="mb-2 text-4xl font-extralight sm:text-5xl">
-                    {`/0${i + 1}`}
-                  </div>
-                  <h3 className="mb-3 flex-1 text-xl font-extralight uppercase sm:text-3xl">
-                    {title[currentLang]}
-                  </h3>
-                  <p>{body[currentLang]}</p>
+        {processList.slice(0, processList.length).map(({ title, body }, i) => (
+          <li key={title.en} className={columnClasses[i + 1]}>
+            <Reveal className="h-full">
+              <div className="flex h-full flex-col border border-white p-3 leading-tight">
+                <div className="mb-2 text-4xl font-extralight sm:text-5xl">
+                  {`/0${i + 1}`}
                 </div>
-              </Reveal>
-            </li>
-          ))}
+                <h3 className="mb-3 flex-1 text-xl font-extralight uppercase sm:text-3xl">
+                  {title[currentLang]}
+                </h3>
+                <p>{body[currentLang]}</p>
+              </div>
+            </Reveal>
+          </li>
+        ))}
       </ul>
     </section>
   );

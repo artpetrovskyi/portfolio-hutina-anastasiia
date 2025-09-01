@@ -81,9 +81,9 @@ export default function Cases() {
         <Reveal>
           <CarouselContent className="-ml-5">
             <CarouselItem className="hidden pl-5 md:basis-[45%] lg:basis-[40%] xl:block xl:basis-1/3" />
-            {casesData.map((item) => (
+            {casesData.map((item, i) => (
               <CarouselItem
-                key={item.link}
+                key={item.link + i}
                 className="basis-full pl-5 min-[500px]:basis-[80%] sm:basis-[55%] md:basis-[45%] lg:basis-[40%] xl:basis-1/3"
               >
                 <CaseCard {...item} />

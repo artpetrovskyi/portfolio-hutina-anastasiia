@@ -16,8 +16,8 @@ import { useEffect } from "react";
 import type { ContactsData, HeroData } from "@/lib/types";
 
 interface Props {
-  data?: HeroData,
-  contacts?: ContactsData
+  data?: HeroData;
+  contacts?: ContactsData;
 }
 
 export default function Hero({ data, contacts }: Props) {
@@ -94,7 +94,9 @@ export default function Hero({ data, contacts }: Props) {
         <div className="ibg pointer-events-none relative z-2 -mt-10 min-h-[23rem] min-[500px]:mt-0 min-[500px]:min-h-[36rem] md:min-h-[46rem]">
           <img
             src={import.meta.env.VITE_API_URL + data?.image}
-            alt={data?.firstName[currentLang] + " " + data?.middleName[currentLang]}
+            alt={
+              data?.firstName[currentLang] + " " + data?.middleName[currentLang]
+            }
             className="hero-image object-contain object-bottom px-5 sm:px-0"
             width={1408}
             height={736}
@@ -113,8 +115,12 @@ export default function Hero({ data, contacts }: Props) {
 
         <div className="action-section relative bottom-0 left-0 z-4 pt-20 md:absolute md:pt-0">
           <div className="mb-5 max-w-52 leading-tight font-extralight md:max-w-40">
-            <p className="hidden md:block">{data?.descriptionText[currentLang]}</p>
-            <p className="uppercase md:hidden">{data?.actionText[currentLang]}</p>
+            <p className="hidden md:block">
+              {data?.descriptionText[currentLang]}
+            </p>
+            <p className="uppercase md:hidden">
+              {data?.actionText[currentLang]}
+            </p>
           </div>
 
           <Drawer>
@@ -129,7 +135,7 @@ export default function Hero({ data, contacts }: Props) {
                   <DrawerTitle className="text-2xl leading-none font-extralight uppercase">
                     {data?.drawerTitle[currentLang]}
                   </DrawerTitle>
-                  <DrawerDescription className="font-light text-[1rem]">
+                  <DrawerDescription className="text-[1rem] font-light">
                     {data?.drawerSubitle[currentLang]}
                   </DrawerDescription>
                 </DrawerHeader>
@@ -145,7 +151,7 @@ export default function Hero({ data, contacts }: Props) {
                 </ul>
                 <DrawerFooter>
                   <DrawerClose asChild>
-                    <Button variant="secondary" className="min-w-60">
+                    <Button variant="secondary" className="min-h-12 min-w-60">
                       {currentLang === "en" ? "Close" : "Закрити"}
                     </Button>
                   </DrawerClose>

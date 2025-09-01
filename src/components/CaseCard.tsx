@@ -23,7 +23,12 @@ export default function CaseCard({ title, image, body, link }: CaseItem) {
 
       <p>{body[currentLang]}</p>
 
-      <a href={link} className="absolute inset-0" />
+      <a
+        target="_blank"
+        href={link}
+        aria-label={title[currentLang]}
+        className="absolute inset-0"
+      />
     </div>
   );
 }

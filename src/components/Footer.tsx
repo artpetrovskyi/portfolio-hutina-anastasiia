@@ -24,6 +24,7 @@ export default function Footer({ data }: Props) {
               className="pointer-events-none object-contain"
               width={1407}
               height={310}
+              loading="lazy"
             />
           </div>
         )}
@@ -35,6 +36,7 @@ export default function Footer({ data }: Props) {
               className="pointer-events-none object-contain"
               width={724}
               height={376}
+              loading="lazy"
             />
           </div>
         )}

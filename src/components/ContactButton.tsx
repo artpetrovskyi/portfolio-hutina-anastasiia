@@ -1,13 +1,17 @@
+import type { ContactItem } from "@/lib/types";
 import { Button } from "./ui/button";
 
-interface Props {
-  link: string;
-  title: string;
-  icon?: string;
+interface Props extends ContactItem {
   className?: string;
 }
 
-export default function ContactButton({ link, title, icon, className }: Props) {
+export default function ContactButton({
+  link,
+  title,
+  icon,
+  label,
+  className,
+}: Props) {
   return (
     <Button variant="outline" asChild className={className}>
       <a
@@ -19,9 +23,10 @@ export default function ContactButton({ link, title, icon, className }: Props) {
         {icon && (
           <img
             src={import.meta.env.VITE_API_URL + icon}
-            alt={title}
+            alt={label}
             width={20}
             height={20}
+            loading="lazy"
           />
         )}
         <span>{title}</span>

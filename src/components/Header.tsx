@@ -123,7 +123,7 @@ export default function Header({ contacts }: Props) {
         <div className="order-3 flex items-center min-[800px]:hidden">
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
-              <Button size="icon" variant="ghost">
+              <Button size="icon" variant="ghost" aria-label="Menu">
                 <AlignJustify className="size-6" />
               </Button>
             </SheetTrigger>
