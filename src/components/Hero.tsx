@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/drawer";
 import { useLanguage } from "@/hooks/useLanguage";
 import { useAnimate } from "motion/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import type { ContactsData, HeroData } from "@/lib/types";
 
 interface Props {
@@ -21,6 +21,7 @@ interface Props {
 }
 
 export default function Hero({ data, contacts }: Props) {
+  const [imageLoaded, setImageLoaded] = useState(false);
   const { currentLang } = useLanguage();
   const year = new Date().getFullYear();
 
@@ -97,9 +98,12 @@ export default function Hero({ data, contacts }: Props) {
             alt={
               data?.firstName[currentLang] + " " + data?.middleName[currentLang]
             }
-            className="hero-image object-contain object-bottom px-5 sm:px-0"
+            className={`hero-image object-contain object-bottom px-5 transition-opacity duration-500 sm:px-0 ${
+              imageLoaded ? "opacity-100" : "opacity-0"
+            }`}
             width={1408}
             height={736}
+            onLoad={() => setImageLoaded(true)}
           />
           <div className="from-background absolute bottom-0 left-0 h-1/3 w-full bg-gradient-to-t to-transparent"></div>
         </div>

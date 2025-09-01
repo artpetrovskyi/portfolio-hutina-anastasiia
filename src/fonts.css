@@ -1,9 +1,9 @@
 @font-face {
   font-family: "AnastasiaScript";
   src:
-    url("./assets/fonts/AnastasiaScript.woff2") format("woff2"),
-    url("./assets/fonts/AnastasiaScript.woff") format("woff");
+    url("/fonts/AnastasiaScript.woff2") format("woff2"),
+    url("/fonts/AnastasiaScript.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block; /* <- blocks text until font is loaded */
 }

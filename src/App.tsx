@@ -9,9 +9,10 @@ import Process from "./components/Process";
 import { useFetchContent } from "./hooks/useFetchContent";
 import { useLanguage } from "./hooks/useLanguage";
 import type { GeneralData } from "./lib/types";
-import { AnimatePresence } from "motion/react";
 import { useDelayedSuccess } from "./hooks/useDelayedSuccess";
 import Loader from "./components/Loader";
+import { useWindowLoaded } from "./hooks/useWindowLoaded";
+import { useFontsLoaded } from "./hooks/useFontsLoaded";
 
 function App() {
   const {
@@ -22,8 +23,12 @@ function App() {
 
   useLanguage();
 
-  const loaderDelay = 1.5; // in seconds
-  const showContent = useDelayedSuccess(status, loaderDelay * 1000);
+  const loaderDelay = 1.5; // sec
+  const jsonReady = useDelayedSuccess(status, loaderDelay * 1000);
+  const windowReady = useWindowLoaded();
+  const fontsReady = useFontsLoaded();
+
+  const showContent = jsonReady && windowReady && fontsReady;
 
   if (error) {
     return <MainError error={error} onRetry={() => window.location.reload()} />;
@@ -32,9 +37,7 @@ function App() {
   return (
     <>
       {/* Loader */}
-      <AnimatePresence>
-        {!showContent && <Loader duration={loaderDelay} key="loader" />}
-      </AnimatePresence>
+      <Loader duration={loaderDelay} showContent={showContent} />
 
       {/* Main App */}
       {showContent && (
