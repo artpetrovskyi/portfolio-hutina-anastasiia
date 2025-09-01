@@ -32,7 +32,9 @@ function App() {
   return (
     <>
       {/* Loader */}
-      <AnimatePresence>{!showContent && <Loader />}</AnimatePresence>
+      <AnimatePresence>
+        {!showContent && <Loader duration={loaderDelay} key="loader" />}
+      </AnimatePresence>
 
       {/* Main App */}
       {showContent && (
