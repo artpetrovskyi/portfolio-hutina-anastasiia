@@ -5,5 +5,5 @@
     url("/fonts/AnastasiaScript.woff") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: block; /* <- blocks text until font is loaded */
+  font-display: swap;
 }

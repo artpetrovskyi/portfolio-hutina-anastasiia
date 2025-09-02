@@ -11,8 +11,6 @@ import { useLanguage } from "./hooks/useLanguage";
 import type { GeneralData } from "./lib/types";
 import { useDelayedSuccess } from "./hooks/useDelayedSuccess";
 import Loader from "./components/Loader";
-import { useWindowLoaded } from "./hooks/useWindowLoaded";
-import { useFontsLoaded } from "./hooks/useFontsLoaded";
 
 function App() {
   const {
@@ -24,11 +22,8 @@ function App() {
   useLanguage();
 
   const loaderDelay = 1.5; // sec
-  const jsonReady = useDelayedSuccess(status, loaderDelay * 1000);
-  const windowReady = useWindowLoaded();
-  const fontsReady = useFontsLoaded();
+  const showContent = useDelayedSuccess(status, loaderDelay * 1000);
 
-  const showContent = jsonReady && windowReady && fontsReady;
 
   if (error) {
     return <MainError error={error} onRetry={() => window.location.reload()} />;
