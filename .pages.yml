@@ -176,7 +176,7 @@ content:
     fields:
       # Cases Section
       - name: items
-        label: Cases Section (max = 6)
+        label: Cases Section (max = 8)
         type: object
         list: true
         fields:
