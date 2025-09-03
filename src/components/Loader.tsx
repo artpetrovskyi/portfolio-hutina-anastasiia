@@ -26,6 +26,11 @@ export default function Loader({ duration = 1, showContent }: Props) {
             exit={{ x: "-100%" }}
             transition={{ duration: 1 }}
           />
+          <motion.div
+            className="fixed top-0 right-0 z-9999 h-screen w-1/2 bg-neutral-950"
+            exit={{ x: "100%" }}
+            transition={{ duration: 1 }}
+          />
 
           <motion.div
             className="bg-foreground fixed top-1/2 left-1/2 z-9999 h-screen w-[2px] origin-center -translate-x-1/2 -translate-y-1/2"
@@ -42,12 +47,6 @@ export default function Loader({ duration = 1, showContent }: Props) {
               opacity: 0,
               transition: { duration: 0.2, ease: "easeInOut" },
             }}
-          />
-
-          <motion.div
-            className="fixed top-0 right-0 z-9999 h-screen w-1/2 bg-neutral-950"
-            exit={{ x: "100%" }}
-            transition={{ duration: 1 }}
           />
         </React.Fragment>
       )}

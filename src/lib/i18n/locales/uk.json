@@ -4,7 +4,8 @@
     "firstName": "Анастасія",
     "lastName": "Гутіна",
     "middleName": "Сергіївна",
-    "error": ""
+    "error": "",
+    "loading": "Завантаження..."
   },
   "about-me": {
     "title": "Про мене"

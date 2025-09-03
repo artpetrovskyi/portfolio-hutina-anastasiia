@@ -17,49 +17,50 @@ export default function Process({ data }: Props) {
     return null;
   }
 
-  // Limit to maximum 6 processes, but use actual length if less
-  // const maxProcesses = Math.min(processList.length, 6);
-
   const columnClasses = [
-    "col-start-1 row-start-1 col-span-6 row-span-1 xl:col-span-3",
-    "col-start-1 row-start-2 col-span-6 row-span-1 md:col-span-3 xl:col-start-4 xl:row-start-1 xl:col-span-2",
-    "col-start-1 row-start-3 col-span-6 row-span-1 md:col-start-5 md:row-start-2 md:col-span-2 xl:col-start-6 xl:row-start-1 xl:col-span-1",
-    "col-start-1 row-start-4 col-span-6 row-span-1 md:row-start-3 md:col-span-3 xl:col-start-2 xl:row-start-2 xl:col-span-2",
-    "col-start-1 row-start-5 col-span-6 row-span-1 md:col-start-4 md:row-start-3 md:col-span-2 xl:col-start-4 xl:row-start-2 xl:col-span-1",
-    "col-start-1 row-start-6 col-span-6 row-span-1 md:row-start-4 md:col-span-2 xl:col-start-6 xl:row-start-2 xl:col-span-1",
-    "col-start-1 row-start-7 col-span-6 row-span-1 md:col-start-4 md:row-start-4 md:col-span-3 xl:col-start-3 xl:row-start-3 xl:col-span-2",
+    "md:col-start-1 md:col-span-5 xl:col-start-7 xl:col-span-4",
+    "md:col-start-6 md:col-span-4 xl:col-start-11 xl:col-span-2",
+
+    "md:col-start-1 md:col-span-5 xl:col-start-3 xl:col-span-4",
+    "md:col-start-6 md:col-span-4 xl:col-start-7 xl:col-span-2",
+    "md:col-start-1 md:col-span-5 xl:col-start-11 xl:col-span-2",
+
+    "md:col-start-6 md:col-span-4 xl:col-start-5 xl:col-span-4",
   ];
 
   return (
     <section className="container">
       <SectionTop>{t("my-process.title")}</SectionTop>
 
-      <ul className="grid grid-cols-6 gap-5 [&>li]:min-h-64">
+      <ul className="grid grid-cols-1 gap-5 md:grid-cols-9 xl:grid-cols-12 [&>li]:min-h-64">
         {/* Static text in first slot */}
-        <li className={`${columnClasses[0]} flex items-center md:block`}>
+        <li
+          className={`flex !min-h-auto items-center md:col-span-6 md:block xl:col-start-1`}
+        >
           <Reveal>
-            <p className="max-w-72 text-2xl leading-none font-extralight uppercase md:max-w-60">
+            <p className="max-w-72 text-2xl leading-none font-extralight uppercase xl:max-w-60">
               {data?.mainDescription[currentLang]}
             </p>
           </Reveal>
         </li>
 
-        {/* PROCESS items start from columnClasses[1] */}
-        {processList.slice(0, processList.length).map(({ title, body }, i) => (
-          <li key={title.en} className={columnClasses[i + 1]}>
-            <Reveal className="h-full">
-              <div className="flex h-full flex-col border border-white p-3 leading-tight">
-                <div className="mb-2 text-4xl font-extralight sm:text-5xl">
-                  {`/0${i + 1}`}
+        {processList
+          .slice(0, columnClasses.length)
+          .map(({ title, body }, i) => (
+            <li key={title.en} className={columnClasses[i]}>
+              <Reveal className="h-full">
+                <div className="flex h-full flex-col border border-white p-3 leading-tight">
+                  <div className="mb-2 text-4xl font-extralight sm:text-5xl">
+                    {`/0${i + 1}`}
+                  </div>
+                  <h3 className="mb-3 flex-1 text-xl font-extralight uppercase sm:text-3xl">
+                    {title[currentLang]}
+                  </h3>
+                  <p>{body[currentLang]}</p>
                 </div>
-                <h3 className="mb-3 flex-1 text-xl font-extralight uppercase sm:text-3xl">
-                  {title[currentLang]}
-                </h3>
-                <p>{body[currentLang]}</p>
-              </div>
-            </Reveal>
-          </li>
-        ))}
+              </Reveal>
+            </li>
+          ))}
       </ul>
     </section>
   );

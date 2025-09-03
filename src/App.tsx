@@ -24,7 +24,6 @@ function App() {
   const loaderDelay = 1.5; // sec
   const showContent = useDelayedSuccess(status, loaderDelay * 1000);
 
-
   if (error) {
     return <MainError error={error} onRetry={() => window.location.reload()} />;
   }
@@ -40,7 +39,7 @@ function App() {
           <Header contacts={generalData?.contacts} />
           <main>
             <Hero data={generalData?.hero} contacts={generalData?.contacts} />
-            <div className="space-y-30 sm:space-y-20">
+            <div className="space-y-20 sm:space-y-30">
               <About data={generalData?.about} />
               <Cases />
               <Process data={generalData?.process} />

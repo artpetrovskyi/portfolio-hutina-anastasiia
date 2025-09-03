@@ -4,7 +4,8 @@
     "firstName": "Anastasiia",
     "lastName": "Hutina",
     "middleName": "Sergiyevna",
-    "error": ""
+    "error": "",
+    "loading": "Loading..."
   },
   "about-me": {
     "title": "About me"
