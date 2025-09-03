@@ -34,7 +34,7 @@ export default function Process({ data }: Props) {
     <section className="container">
       <SectionTop>{t("my-process.title")}</SectionTop>
 
-      <ul className="grid grid-cols-6 grid-rows-7 gap-5 md:grid-rows-4 xl:grid-rows-3">
+      <ul className="grid grid-cols-6 gap-5 [&>li]:min-h-64">
         {/* Static text in first slot */}
         <li className={`${columnClasses[0]} flex items-center md:block`}>
           <Reveal>
