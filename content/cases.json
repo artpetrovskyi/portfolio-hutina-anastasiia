@@ -1,18 +1,6 @@
 {
   "items": [
     {
-      "image": "/images/cases/barbara-palvin.jpg",
-      "title": {
-        "en": "Landing Page",
-        "uk": "Landing Page"
-      },
-      "body": {
-        "en": "Landing design for a fashion brand with an emphasis on atmosphere",
-        "uk": "Landing design for a fashion brand with an emphasis on atmosphere"
-      },
-      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
-    },
-    {
       "image": "/images/cases/santehprostir.jpg",
       "title": {
         "en": "E-commerce",
@@ -21,6 +9,18 @@
       "body": {
         "en": "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
         "uk": "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure"
+      },
+      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
+    },
+    {
+      "image": "/images/cases/barbara-palvin.jpg",
+      "title": {
+        "en": "Landing Page",
+        "uk": "Landing Page"
+      },
+      "body": {
+        "en": "Landing design for a fashion brand with an emphasis on atmosphere",
+        "uk": "Landing design for a fashion brand with an emphasis on atmosphere"
       },
       "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
     },
@@ -45,6 +45,54 @@
       "body": {
         "en": "Ux/Ui design website  of the Ministry of Economy of Ukraine",
         "uk": "Ux/Ui design website  of the Ministry of Economy of Ukraine"
+      },
+      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
+    },
+    {
+      "image": "/images/cases/santehprostir.jpg",
+      "title": {
+        "en": "E-commerce",
+        "uk": "E-commerce"
+      },
+      "body": {
+        "en": "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure",
+        "uk": "UX/UI of a platform for selling plumbing equipment — a complex multi-page structure"
+      },
+      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
+    },
+    {
+      "image": "/images/cases/barbara-palvin.jpg",
+      "title": {
+        "en": "Landing Page 2",
+        "uk": "Landing Page 2"
+      },
+      "body": {
+        "en": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam veritatis pariatur iure repellendus eius impedit nulla suscipit? Tenetur alias sequi eligendi, voluptate nobis magni accusantium inventore illum, et totam dicta?",
+        "uk": " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam veritatis pariatur iure repellendus eius impedit nulla suscipit? Tenetur alias sequi eligendi, voluptate nobis magni accusantium inventore illum, et totam dicta?"
+      },
+      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
+    },
+    {
+      "image": "/images/cases/ai-smm-assistant.jpg",
+      "title": {
+        "en": "UX/UI ",
+        "uk": "UX/UI "
+      },
+      "body": {
+        "en": "Tenetur alias sequi eligendi, voluptate nobis magni accusantium inventore illum, et totam dicta?",
+        "uk": "Tenetur alias sequi eligendi, voluptate nobis magni accusantium inventore illum, et totam dicta?"
+      },
+      "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
+    },
+    {
+      "image": "/images/cases/ministry-of-economy.jpg",
+      "title": {
+        "en": "Landing",
+        "uk": "Landing"
+      },
+      "body": {
+        "en": "Tenetur alias sequi eligendi, voluptate nobis magni accusantium inventore illum, et totam dicta?",
+        "uk": "Tenetur alias sequi eligendi, voluptate nobis magni accusantium inventore illum, et totam dicta?"
       },
       "link": "https://www.behance.net/gallery/232788509/UXUI-designer-portfolio"
     }
