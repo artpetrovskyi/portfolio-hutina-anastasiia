@@ -186,10 +186,10 @@
   },
   "footer": {
     "pc": {
-      "image": "/images/footer_desktop.png"
+      "image": "/images/quote-pc.png"
     },
     "mob": {
-      "image": "/images/footer_mobile.png"
+      "image": "/images/quote-mob.png"
     }
   }
 }
