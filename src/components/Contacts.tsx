@@ -43,7 +43,7 @@ export default function Contacts({ contacts }: Props) {
               <Reveal>
                 <ContactButton
                   {...contact}
-                  className="min-h-[4.375rem] min-w-60 !border-white max-[500px]:min-h-12 max-[500px]:justify-start max-[500px]:border-none max-[500px]:px-0 min-[500px]:w-full"
+                  className="min-h-[4.375rem] min-w-60 !border-white max-[500px]:min-h-12 max-[500px]:justify-start max-[500px]:border-none max-[500px]:px-1 min-[500px]:w-full"
                 />
               </Reveal>
             )}
