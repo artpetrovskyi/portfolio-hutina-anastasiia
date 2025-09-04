@@ -18,21 +18,21 @@ export default function Process({ data }: Props) {
   }
 
   const columnClasses = [
-    "md:col-start-1 md:col-span-5 xl:col-start-7 xl:col-span-4",
-    "md:col-start-6 md:col-span-4 xl:col-start-11 xl:col-span-2",
+    "md:col-start-1 md:col-span-5 lg:col-start-7 lg:col-span-4",
+    "md:col-start-6 md:col-span-4 lg:col-start-11 lg:col-span-2",
 
-    "md:col-start-1 md:col-span-5 xl:col-start-3 xl:col-span-4",
-    "md:col-start-6 md:col-span-4 xl:col-start-7 xl:col-span-2",
-    "md:col-start-1 md:col-span-5 xl:col-start-11 xl:col-span-2",
+    "md:col-start-1 md:col-span-5 lg:col-start-3 lg:col-span-4",
+    "md:col-start-6 md:col-span-4 lg:col-start-7 lg:col-span-2",
+    "md:col-start-1 md:col-span-5 lg:col-start-11 lg:col-span-2",
 
-    "md:col-start-6 md:col-span-4 xl:col-start-5 xl:col-span-4",
+    "md:col-start-6 md:col-span-4 lg:col-start-5 lg:col-span-4",
   ];
 
   return (
     <section className="container">
       <SectionTop>{t("my-process.title")}</SectionTop>
 
-      <ul className="grid grid-cols-1 gap-5 md:grid-cols-9 xl:grid-cols-12 [&>li]:min-h-64">
+      <ul className="grid grid-cols-1 gap-5 md:grid-cols-9 lg:grid-cols-12 [&>li]:min-h-64">
         {/* Static text in first slot */}
         <li
           className={`flex !min-h-auto items-center md:col-span-6 md:block xl:col-start-1`}

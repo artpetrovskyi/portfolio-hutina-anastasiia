@@ -76,7 +76,7 @@ export default function Hero({ data, contacts }: Props) {
       <div ref={scope} className="relative flex-1">
         <div className="top-0 -left-5 z-1 min-[500px]:absolute min-[500px]:left-0">
           <div className="mb-5 flex flex-col leading-none">
-            <div className="first-name font-anastasia -mb-4 text-7xl sm:text-8xl lg:text-[9.5rem] xl:-mb-8 xl:pr-10 xl:text-[10.6rem]">
+            <div className="first-name font-anastasia -mb-4 text-7xl sm:text-8xl lg:text-[9rem] xl:-mb-8 xl:pr-10 xl:text-[10.6rem]">
               {data?.firstName[currentLang]}
             </div>
             <div className="middle-name flex-1 text-right text-[2.5rem] font-extralight uppercase sm:text-4xl lg:text-6xl xl:text-8xl">
@@ -112,7 +112,7 @@ export default function Hero({ data, contacts }: Props) {
           <span className="hero-title -mb-5 block text-[2.5rem] font-extralight uppercase sm:text-5xl md:text-6xl lg:text-7xl xl:-mb-10 xl:text-8xl">
             {data?.title[currentLang]}
           </span>
-          <span className="hero-subtitle font-anastasia block pr-5 pl-10 text-7xl sm:pr-10 sm:text-8xl md:text-9xl lg:text-[9.5rem] xl:text-[10.6rem]">
+          <span className="hero-subtitle font-anastasia block pr-5 pl-10 text-7xl sm:pr-10 sm:text-8xl md:text-9xl lg:text-[9rem] xl:text-[10.6rem]">
             {data?.subtitle[currentLang]}
           </span>
         </h1>

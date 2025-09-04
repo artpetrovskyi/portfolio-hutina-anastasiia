@@ -43,24 +43,24 @@ export default function Cases() {
   }
 
   const columnClasses = [
-    "md:col-start-1 md:col-span-5 xl:col-start-4 xl:col-span-5",
-    "md:col-start-6 md:col-span-4 xl:col-start-9 xl:col-span-4",
+    "md:col-start-1 md:col-span-5 lg:col-start-4 lg:col-span-5",
+    "md:col-start-6 md:col-span-4 lg:col-start-9 lg:col-span-4",
 
-    "md:col-start-1 md:col-span-5 xl:col-start-1 xl:col-span-5",
-    "md:col-start-6 md:col-span-4 xl:col-start-9 xl:col-span-4",
+    "md:col-start-1 md:col-span-5 lg:col-start-1 lg:col-span-5",
+    "md:col-start-6 md:col-span-4 lg:col-start-9 lg:col-span-4",
 
-    "md:col-start-1 md:col-span-5 xl:col-start-1 xl:col-span-5",
-    "md:col-start-6 md:col-span-4 xl:col-start-6 xl:col-span-4",
+    "md:col-start-1 md:col-span-5 lg:col-start-1 lg:col-span-5",
+    "md:col-start-6 md:col-span-4 lg:col-start-6 lg:col-span-4",
 
-    "md:col-start-1 md:col-span-5 xl:col-start-4 xl:col-span-5",
-    "md:col-start-6 md:col-span-4 xl:col-start-9 xl:col-span-4",
+    "md:col-start-1 md:col-span-5 lg:col-start-4 lg:col-span-5",
+    "md:col-start-6 md:col-span-4 lg:col-start-9 lg:col-span-4",
   ];
 
   return (
     <section id="cases" className="container">
       <SectionTop>{t("cases.title")}</SectionTop>
 
-      <ul className="grid grid-cols-1 gap-5 md:grid-cols-9 xl:grid-cols-12">
+      <ul className="grid grid-cols-1 gap-5 md:grid-cols-9 lg:grid-cols-12">
         {casesList.slice(0, columnClasses.length).map((caseItem, i) => (
           <li key={caseItem.link + i} className={columnClasses[i]}>
             <Reveal>
