@@ -3,6 +3,13 @@
 @plugin "tailwind-scrollbar";
 @import "./fonts.css";
 
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -114,7 +121,7 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 !cursor-none;
   }
 
   html {

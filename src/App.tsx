@@ -11,6 +11,7 @@ import { useLanguage } from "./hooks/useLanguage";
 import type { GeneralData } from "./lib/types";
 import { useDelayedSuccess } from "./hooks/useDelayedSuccess";
 import Loader from "./components/Loader";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   const {
@@ -32,6 +33,7 @@ function App() {
     <>
       {/* Loader */}
       <Loader duration={loaderDelay} showContent={showContent} />
+      <CustomCursor />
 
       {/* Main App */}
       {showContent && (

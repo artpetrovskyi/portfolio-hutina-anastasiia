@@ -19,7 +19,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
         ghost:
           "hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50",
-        link: "after:bg-foreground relative  uppercase after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:content-[''] hover:after:origin-left hover:after:scale-x-100",
+        link: "after:bg-foreground relative  uppercase after:absolute after:-bottom-1 after:left-0 after:h-px after:w-full after:origin-right after:scale-x-0 after:transition-transform after:duration-300 after:content-[''] after:pointer-events-none hover:after:origin-left hover:after:scale-x-100",
       },
       size: {
         default: "h-9 px-4 py-2 has-[>svg]:px-3",
