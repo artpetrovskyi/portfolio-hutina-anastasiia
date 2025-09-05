@@ -26,7 +26,12 @@ function App() {
   const showContent = useDelayedSuccess(status, loaderDelay * 1000);
 
   if (error) {
-    return <MainError error={error} onRetry={() => window.location.reload()} />;
+    return (
+      <>
+        <MainError error={error} onRetry={() => window.location.reload()} />
+        <CustomCursor />
+      </>
+    );
   }
 
   return (
